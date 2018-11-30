@@ -8,9 +8,9 @@ import java.sql.SQLException;
 public class DBConnection {
 
     //Credentials and strings
-    private static final String USERNAME = "motorhomedb";
-    private static final String PASSWORD = "Yg34cZ1W0~0~";
-    private static final String CONNSTRING = "jdbc:mysql://den1.mysql4.gear.host/motorhomedb?useSSL=false";
+    private static final String USERNAME = null;
+    private static final String PASSWORD = null;
+    private static final String CONNSTRING = null;
 
     //Creates a connection and returns it
     public static Connection getConnection() {
