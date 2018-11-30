@@ -1,10 +1,6 @@
 package com.exam.medilink.models;
 
 public class User {
-    public enum String {
-        ADMIN,
-        HELPER
-    }
 
     private String password;
 

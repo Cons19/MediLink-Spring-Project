@@ -2,10 +2,16 @@ package com.exam.medilink.models;
 
 public class News {
     //title, body
+    private final int id;
     private String title;
     private String body;
 
-    public News(String title, String body) {
+    public News() {
+        this.id = -1;
+    }
+
+    public News(int id, String title, String body) {
+        this.id = id;
         this.title = title;
         this.body = body;
     }
@@ -25,4 +31,9 @@ public class News {
     public void setBody(String body) {
         this.body = body;
     }
+
+    public int getId() {
+        return id;
+    }
+
 }
