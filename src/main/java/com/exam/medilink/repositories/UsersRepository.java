@@ -1,25 +1,27 @@
 package com.exam.medilink.repositories;
 
+import com.exam.medilink.models.User;
+
 import java.util.ArrayList;
 
-public class UsersRepository extends AbstractCrudRepository<Object> {
+public class UsersRepository extends AbstractCrudRepository<User> {
     @Override
-    public int create(Object item) {
+    public int create(User item) {
         return 0;
     }
 
     @Override
-    public ArrayList<Object> readAll() {
+    public ArrayList<User> readAll() {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public Object read(int id) {
+    public User read(int id) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public void update(Object item) {
+    public void update(User item) {
         throw new UnsupportedOperationException();
     }
 
