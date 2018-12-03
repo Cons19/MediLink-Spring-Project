@@ -5,6 +5,15 @@ import com.exam.medilink.models.User;
 import java.util.ArrayList;
 
 public class UsersRepository extends AbstractCrudRepository<User> {
+    private static UsersRepository instance;
+    public static  UsersRepository getInstance() {
+        if (instance == null) {
+            instance = new UsersRepository();
+        }
+        return instance;
+    }
+    private UsersRepository() {}
+
     @Override
     public int create(User item) {
         return 0;

@@ -5,6 +5,15 @@ import com.exam.medilink.models.Product;
 import java.util.ArrayList;
 
 public class ProductsRepository extends AbstractCrudRepository<Product> {
+    private static ProductsRepository instance;
+    public static  ProductsRepository getInstance() {
+        if (instance == null) {
+            instance = new ProductsRepository();
+        }
+        return instance;
+    }
+    private ProductsRepository() {}
+
     @Override
     public int create(Product item) {
         return 0;
