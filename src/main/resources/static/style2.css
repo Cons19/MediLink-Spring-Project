@@ -1,0 +1,30 @@
+body {
+    background-color: #fff;
+    /*background-color: #87bfdd;*/
+
+}
+
+p {
+    color: #87bfdd;
+}
+
+
+
+.container {
+    padding: 20px;
+}
+/* Products page */
+/* Cards */
+
+.card {
+    display: inline-block;
+    width: 300px;
+    /*height: 500px;*/
+    padding: 20px;
+    margin: 20px;
+}
+
+.card-img-top {
+    width: 200px;
+    height: 250px;
+}
