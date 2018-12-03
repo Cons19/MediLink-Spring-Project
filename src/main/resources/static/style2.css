@@ -22,9 +22,18 @@ p {
     /*height: 500px;*/
     padding: 20px;
     margin: 20px;
+    border: 1px solid #ccc;
 }
 
 .card-img-top {
     width: 200px;
     height: 250px;
+}
+
+.nav {
+    height: 70px;
+    padding-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 2px solid #007bff;
 }
