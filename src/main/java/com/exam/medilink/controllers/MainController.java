@@ -69,6 +69,11 @@ public class MainController {
         return "qna";
     }
 
+    @GetMapping("/team")
+    public String team() {
+        return "team";
+    }
+
     @GetMapping("/search")
     public String search() {
         return "search";
