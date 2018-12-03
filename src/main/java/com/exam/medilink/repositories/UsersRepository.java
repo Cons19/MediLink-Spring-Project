@@ -30,12 +30,12 @@ public class UsersRepository extends AbstractCrudRepository<User> {
     }
 
     @Override
-    public void update(User item) {
+    public boolean update(User item) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public void delete(int id) {
+    public boolean delete(int id) {
         throw new UnsupportedOperationException();
     }
 }

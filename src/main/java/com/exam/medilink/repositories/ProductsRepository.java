@@ -30,12 +30,12 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
     }
 
     @Override
-    public void update(Product item) {
+    public boolean update(Product item) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public void delete(int id) {
+    public boolean delete(int id) {
         throw new UnsupportedOperationException();
     }
 }

@@ -32,12 +32,12 @@ public class NewsRepository extends AbstractCrudRepository<News> {
     }
 
     @Override
-    public void update(News item) {
+    public boolean update(News item) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public void delete(int id) {
+    public boolean delete(int id) {
         throw new UnsupportedOperationException();
     }
 }
