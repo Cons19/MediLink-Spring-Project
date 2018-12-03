@@ -7,7 +7,14 @@ import java.util.ArrayList;
 //#Razvan
 //Repository connecting to the database of the Motorhome model
 public class NewsRepository extends AbstractCrudRepository<News> {
-
+    private static NewsRepository instance;
+    public static  NewsRepository getInstance() {
+        if (instance == null) {
+            instance = new NewsRepository();
+        }
+        return instance;
+    }
+    private NewsRepository() {}
 
     @Override
     public int create(News item) {
@@ -25,12 +32,12 @@ public class NewsRepository extends AbstractCrudRepository<News> {
     }
 
     @Override
-    public void update(News item) {
+    public boolean update(News item) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public void delete(int id) {
+    public boolean delete(int id) {
         throw new UnsupportedOperationException();
     }
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public interface CrudRepository<T> {
 
     //Adds a new element in the table
-    //and return its database id
+    //and returns its database id
     int create(T item);
 
     //Reads all the elements of the table
@@ -15,8 +15,10 @@ public interface CrudRepository<T> {
     T read(int id);
 
     //Updates an existing element in the table
-    void update(T item);
+    //returns true upon success, false otherwise
+    boolean update(T item);
 
     //Deletes an element from the table
-    void delete(int id);
+    //returns true upon success, false otherwise
+    boolean delete(int id);
 }
