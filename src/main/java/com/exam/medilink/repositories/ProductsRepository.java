@@ -41,6 +41,7 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
 
             while ((line = bufferedReader.readLine()) != null) {
                 description += line;
+                description += '\n';
             }
 
             bufferedReader.close();

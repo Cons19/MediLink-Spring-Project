@@ -49,7 +49,11 @@
             <!--<p class="card-text">Description</p>-->
 
             <tr th:each="dv: ${description}">
-                <td th:text="${dv}" />
+                <!--<p th:text="${dv}"></p>-->
+
+                <div class="text" th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(dv),'\n','&lt;br /&gt;'))}"></div>
+
+
             </tr>
 
             <!--<a href="#" class="btn btn-primary">Read More...</a>-->

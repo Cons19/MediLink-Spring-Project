@@ -24,6 +24,7 @@ public class ProductController {
     public String product(@RequestParam("id") int id, Model model) {
 
         productMarius.setDescription(productsRepository.returnDescription(productMarius.getId()));
+        //System.out.println(productMarius.getDescription());
         model.addAttribute("description", productMarius.getDescription());
         return "product";
     }
