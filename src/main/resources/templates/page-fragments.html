@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Header</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div th:fragment="header(activePage)">
@@ -29,6 +29,20 @@
             <input type="text" class="form-control" placeholder="Search">
         </li>
     </ul>
+</div>
+
+<div th:fragment="footer" class="footer">
+    <p class="contact">
+        MediLink A/S 			<br>
+        Gammelmosevej 176 A     <br>
+        DK-2800 Lyngby          <br>
+        T. (+45) 70 22 30 15    <br>
+        medilink@medilink.dk
+    </p>
+    <a href="http://medilink.dk/" target="_blank"><img src="images/medilink.png" hspace="20"></a>
+    <a href="https://www.facebook.com/dragos.mocanasu" target="_blank" class="social-icon facebook" rel="noopener noreferrer"></a>
+    <a href="https://www.linkedin.com/in/dragos-mocanasu/" target="_blank" class="social-icon linkedin" rel="noopener noreferrer"></a>
+    <a href="https://hydrozid.com/en/" target="_blank"><img src="images/hydrozid.png" hspace="20"></a>
 </div>
 </body>
 </html>

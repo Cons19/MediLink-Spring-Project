@@ -12,37 +12,13 @@
 </head>
 <body>
 
-
-
-<ul class="nav nav-pills nav-fill">
-    <li class="nav-item">
-        <a class="nav-link" href="#">Medilink</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active" href="#">Products</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Team Members</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">FAQ</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled" href="#">News</a>
-    </li>
-    <li>
-        <input type="text" class="form-control" placeholder="Search">
-    </li>
-</ul>
-
+<!--Header Fragment-->
+<div th:insert="/page-fragments :: header('products')"></div>
 
 <div class="container">
 
     <div class="card card-big">
-        <img class="card-img-top center" src="/images/product.png">
+        <img class="card-img-top center" src="images/product.png">
         <div class="card-body">
             <h5 class="card-title">Product 1</h5>
 
@@ -61,6 +37,9 @@
     </div>
 
 </div>
+
+<!--Footer Fragment-->
+<div th:insert="/page-fragments :: footer"></div>
 
 </body>
 </html>

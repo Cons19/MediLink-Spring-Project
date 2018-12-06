@@ -13,7 +13,7 @@
 <body>
 
 <!--Header Fragment-->
-<div th:insert="/fragment-header :: header('contact')"></div>
+<div th:insert="/page-fragments :: header('contact')"></div>
 
 <div class="container">
 
@@ -39,7 +39,9 @@
 
 </div>
 
-<!--<div th:insert="/fragment-footer :: footer"></div>-->
+
+<!--Footer Fragment-->
+<div th:insert="/page-fragments :: footer"></div>
 
 </body>
 </html>

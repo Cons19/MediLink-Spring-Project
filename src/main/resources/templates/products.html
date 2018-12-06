@@ -12,13 +12,13 @@
 </head>
 <body>
 
-<div th:insert="/fragment-header :: header('products')"></div>
-
+<!--Header Fragment-->
+<div th:insert="/page-fragments :: header('products')"></div>
 
 <div class="container">
 
     <div class="card products">
-        <img class="card-img-top" src="/images/product.png">
+        <img class="card-img-top" src="images/product.png">
         <div class="card-body">
             <h5 class="card-title">Hydrozid 1</h5>
             <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="card products">
-        <img class="card-img-top" src="/images/product.png">
+        <img class="card-img-top" src="images/product.png">
         <div class="card-body">
             <h5 class="card-title">Hydrozid 2</h5>
             <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
@@ -36,7 +36,7 @@
     </div>
 
     <div class="card products">
-        <img class="card-img-top" src="/images/product.png">
+        <img class="card-img-top" src="images/product.png">
         <div class="card-body">
             <h5 class="card-title">Hydrozid 3</h5>
             <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="card products">
-        <img class="card-img-top" src="/images/product.png">
+        <img class="card-img-top" src="images/product.png">
         <div class="card-body">
             <h5 class="card-title">Hydrozid 4</h5>
             <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="card products">
-        <img class="card-img-top" src="/images/product.png">
+        <img class="card-img-top" src="images/product.png">
         <div class="card-body">
             <h5 class="card-title">Hydrozid 5</h5>
             <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
@@ -63,7 +63,7 @@
     </div>
 
     <div class="card products">
-        <img class="card-img-top" src="/images/product.png">
+        <img class="card-img-top" src="images/product.png">
         <div class="card-body">
             <h5 class="card-title">Hydrozid 6</h5>
             <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
@@ -101,7 +101,8 @@
 
 </div>
 
-<!--<div th:insert="/fragment-footer :: footer"></div>-->
+<!--Footer Fragment-->
+<div th:insert="/page-fragments :: footer"></div>
 
 </body>
 </html>

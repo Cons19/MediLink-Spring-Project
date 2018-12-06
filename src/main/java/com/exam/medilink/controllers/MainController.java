@@ -64,9 +64,9 @@ public class MainController {
         return "ADMIN_TEMPLATE";
     }
 
-    @GetMapping("/qna")
-    public String qna() {
-        return "qna";
+    @GetMapping("/faq")
+    public String faq() {
+        return "faq";
     }
 
     @GetMapping("/team")

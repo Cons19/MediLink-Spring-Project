@@ -3,7 +3,6 @@ package com.exam.medilink.repositories;
 import com.exam.medilink.models.Product;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ProductsRepository extends AbstractCrudRepository<Product> {
