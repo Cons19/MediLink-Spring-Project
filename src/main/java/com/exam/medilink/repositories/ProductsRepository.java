@@ -13,7 +13,7 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
         }
         return instance;
     }
-    public ProductsRepository() {}
+    private ProductsRepository() {}
 
     @Override
     public int create(Product item) {
