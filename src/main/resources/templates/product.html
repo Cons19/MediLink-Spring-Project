@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
 
@@ -33,6 +33,9 @@
     <li class="nav-item">
         <a class="nav-link disabled" href="#">News</a>
     </li>
+    <li>
+        <input type="text" class="form-control" placeholder="Search">
+    </li>
 </ul>
 
 
@@ -41,26 +44,17 @@
     <div class="card card-big">
         <img class="card-img-top center" src="/images/product.png">
         <div class="card-body">
-            <h5 class="card-title">Hydrozid 1</h5>
-            <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
+            <h5 class="card-title">Product 1</h5>
 
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat! Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!--<p class="card-text">Description</p>-->
 
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat! Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <tr th:each="dv: ${description}">
+                <!--<p th:text="${dv}"></p>-->
 
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat! Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="text" th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(dv),'\n','&lt;br /&gt;'))}"></div>
+
+
+            </tr>
 
             <!--<a href="#" class="btn btn-primary">Read More...</a>-->
         </div>

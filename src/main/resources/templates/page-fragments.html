@@ -8,7 +8,7 @@
 <div th:fragment="header(activePage)">
     <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-            <a th:class="'nav-link' + ${activePage == 'home' ? ' active' : ''}" href="/">Medilink</a>
+            <a th:class="'nav-link' + ${activePage == 'home' ? ' active' : ''}" href="/">MediLink</a>
         </li>
          <li class="nav-item">
              <a th:class="'nav-link' + ${activePage == 'products' ? ' active' : ''}" href="products">Products</a>
@@ -20,10 +20,13 @@
             <a th:class="'nav-link' + ${activePage == 'contact' ? ' active' : ''}" href="contact">Contact</a>
         </li>
         <li class="nav-item">
-            <a th:class="'nav-link' + ${activePage == 'qna' ? ' active' : ''}" href="qna">FAQ</a>
+            <a th:class="'nav-link' + ${activePage == 'faq' ? ' active' : ''}" href="faq">FAQ</a>
         </li>
         <li class="nav-item">
             <a class="nav-link disabled" href="news">News</a>
+        </li>
+        <li>
+            <input type="text" class="form-control" placeholder="Search">
         </li>
     </ul>
 </div>
