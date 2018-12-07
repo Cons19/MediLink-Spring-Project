@@ -207,26 +207,42 @@ body {
 
 /* Accordion */
 
-.accordion {
-    background-color: #007bff;
-    color: #444;
+.faq {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.faq h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.faq .accordion {
+    color: #212529;
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    border: none;
-    text-align: left;
     outline: none;
-    font-size: 15px;
     transition: 0.4s;
+    text-decoration: none;
+    border-radius: .25rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,.03);
+    border: 1px solid rgba(0,0,0,.125);
 }
 
-.active, .accordion:hover {
-    background-color: #ccc;
+.accordion:active, .accordion:hover {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
 }
 
 .accordion:after {
     content: '\002B';
-    color: black;
+    color: #212529;
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -235,10 +251,38 @@ body {
 .active:after {
     content: "\2212";
 }
-.panel {
+
+.faq .panel {
     padding: 0 18px;
-    background-color: white;
+    background-color: #fff;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    border-radius: .25rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+.faq .panel {
+    padding: 0 18px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: .25rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.faq .panel p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button:focus,
+button:active {
+    outline: none;
+}
+
+
+
