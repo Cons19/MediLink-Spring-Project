@@ -2,6 +2,7 @@ package com.exam.medilink.controllers;
 
 import com.exam.medilink.models.Product;
 import com.exam.medilink.repositories.CrudRepository;
+import com.exam.medilink.repositories.ProductsRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,8 @@ import java.util.ArrayList;
 
 @Controller
 public class ProductController {
+
+    private ProductsRepository pd = ProductsRepository.getInstance();
 
     private CrudRepository<Product> productsRepository = new CrudRepository<Product>() {
 
@@ -54,14 +57,14 @@ public class ProductController {
     public String products(Model model) {
 
         model.addAttribute("productsList", productsRepository.readAll());
-//test
+        //test
         return "products";
     }
 
     @GetMapping("/product")
     public String product(@RequestParam("id") int id, Model model) {
 
-        Product product = productsRepository.read(id);
+        Product product = pd.read(id);
 
         model.addAttribute("description", product.getDescription());
         model.addAttribute("title", product.getName());

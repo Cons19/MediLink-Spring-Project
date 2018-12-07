@@ -33,7 +33,7 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
         String description = "";
         String line;
         File file = new File("src\\main\\resources\\static\\product files\\" + id + ".txt");
-
+        System.out.println(file.getAbsolutePath());
         try {
             // FileReader reads text files in the default encoding
             FileReader fileReader = new FileReader(file);
