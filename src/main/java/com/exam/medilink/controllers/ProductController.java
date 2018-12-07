@@ -29,6 +29,7 @@ public class ProductController {
         product6.setDescription(productsRepository.returnDescription(product6.getId()));
         product4.setDescription(productsRepository.returnDescription(product4.getId()));
         product5.setDescription(productsRepository.returnDescription(product5.getId()));
+        product6.setDescription(productsRepository.returnDescription(product6.getId()));
 
         return "products";
     }
