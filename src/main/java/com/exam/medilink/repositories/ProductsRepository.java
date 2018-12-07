@@ -26,11 +26,13 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
         throw new UnsupportedOperationException();
     }
 
-    public String returnDescription(int id) {
+    @Override
+    public Product read(int id) {
 
+        Product product = new Product();
         String description = "";
         String line;
-        File file = new File("src\\main\\resources\\product files\\" + id + ".txt");
+        File file = new File("src\\main\\resources\\static\\product files\\" + id + ".txt");
 
         try {
             // FileReader reads text files in the default encoding
@@ -44,7 +46,8 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
             }
 
             bufferedReader.close();
-            return description;
+            product.setDescription(description);
+            return product;
 
         } catch (FileNotFoundException ex) {
             System.out.println("Unable to open file '" + file + "'");
@@ -52,11 +55,6 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
             System.out.println("Error reading file '" + file + "'");
 
         }
-        return null;
-    }
-
-    @Override
-    public Product read(int id) {
         return null;
     }
 
