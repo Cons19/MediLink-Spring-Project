@@ -57,10 +57,22 @@ body {
     margin-bottom: 20px;
 }
 
+
+/* Team */
+.team-page {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.team-page h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
 .card.team .card-img-top {
     width: 260px;
     height: 100%;
-    /*padding: 1px;*/
 }
 
 .card .card-title {
@@ -175,7 +187,6 @@ body {
 
 .footer-custom .footer-left {
     margin-left: 30px;
-    /*margin-right: 30px;*/
     padding-left: 100px;
 }
 
