@@ -17,6 +17,17 @@ body {
 /* Products page */
 /* Cards */
 
+.product-page {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.product-page h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
 .card {
     display: inline-block;
     width: 300px;

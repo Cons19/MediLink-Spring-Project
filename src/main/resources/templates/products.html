@@ -15,102 +15,22 @@
 <!--Header Fragment-->
 <div th:insert="/page-fragments :: header('products')"></div>
 
+<!--Body-->
 <div class="container">
-
-    <th:block th:each="product : ${productsList}">
-        <div class="card products">
-            <img class="card-img-top" src="images/product.png">
-            <div class="card-body">
-                <h5 class="card-title" th:text="${product.name}"></h5>
-                <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
-                <a th:href="@{/product(id=${product.id})}" class="btn btn-primary">Read More...</a>
+    <div class="product-page">
+        <h1>List of Products</h1>
+        <th:block th:each="product : ${productsList}">
+            <div class="card products">
+                <img class="card-img-top" src="images/product.png">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${product.name}"></h5>
+                    <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
+                    <a th:href="@{/product(id=${product.id})}" class="btn btn-primary">Read More...</a>
+                </div>
             </div>
-        </div>
-    </th:block>
-
-    <!--<div class="card products">-->
-        <!--<img class="card-img-top" src="images/product.png">-->
-        <!--<div class="card-body">-->
-            <!--<h5 class="card-title">Hydrozid 1</h5>-->
-            <!--<p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>-->
-            <!--<a th:href="@{'/product?id=' + ${1}}" class="btn btn-primary">Read More...</a>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="card products">-->
-        <!--<img class="card-img-top" src="images/product.png">-->
-        <!--<div class="card-body">-->
-            <!--<h5 class="card-title">Hydrozid 2</h5>-->
-            <!--<p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>-->
-            <!--<a th:href="@{'/product?id=' + ${2}}" class="btn btn-primary">Read More...</a>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="card products">-->
-        <!--<img class="card-img-top" src="images/product.png">-->
-        <!--<div class="card-body">-->
-            <!--<h5 class="card-title">Hydrozid 3</h5>-->
-            <!--<p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>-->
-            <!--<a th:href="@{'/product?id=' + ${3}}" class="btn btn-primary">Read More...</a>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="card products">-->
-        <!--<img class="card-img-top" src="images/product.png">-->
-        <!--<div class="card-body">-->
-            <!--<h5 class="card-title">Hydrozid 4</h5>-->
-            <!--<p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>-->
-            <!--<a th:href="@{'/product?id=' + ${4}}" class="btn btn-primary">Read More...</a>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="card products">-->
-        <!--<img class="card-img-top" src="images/product.png">-->
-        <!--<div class="card-body">-->
-            <!--<h5 class="card-title">Hydrozid 5</h5>-->
-            <!--<p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>-->
-            <!--<a th:href="@{'/product?id=' + ${5}}" class="btn btn-primary">Read More...</a>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="card products">-->
-        <!--<img class="card-img-top" src="images/product.png">-->
-        <!--<div class="card-body">-->
-            <!--<h5 class="card-title">Hydrozid 6</h5>-->
-            <!--<p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>-->
-            <!--<a th:href="@{'/product?id=' + ${6}}" class="btn btn-primary">Read More...</a>-->
-        <!--</div>-->
-    <!--</div>-->
-
+        </th:block>
+    </div>
 </div>
-
-
-<!--<div class="container footer-custom">-->
-    <!--<div class="row">-->
-        <!--<div class="col">-->
-            <!--<h1>Footer</h1>-->
-            <!--<p>This is the footer</p>-->
-        <!--</div>-->
-        <!--<div class="col">-->
-            <!--<ul>-->
-                <!--<li>-->
-                    <!--<a href="#">Linked In</a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="#">Facebook</a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="#">Instagram</a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="#">You Tube</a>-->
-                <!--</li>-->
-            <!--</ul>-->
-
-        <!--</div>-->
-    <!--</div>-->
-
-<!--</div>-->
 
 <!--Footer Fragment-->
 <div th:insert="/page-fragments :: footer"></div>
