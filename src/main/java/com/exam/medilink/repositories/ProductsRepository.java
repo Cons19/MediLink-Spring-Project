@@ -29,7 +29,7 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
     public String returnDescription(int id) {
 
         String description = "";
-        String line = "";
+        String line;
         File file = new File("src\\main\\resources\\product files\\" + id + ".txt");
 
         try {
