@@ -65,6 +65,7 @@ public class ProductController {
     public String product(@RequestParam("id") int id, Model model) {
 
         Product product = pd.read(id);
+        product.setName(productsRepository.read(id).getName());
 
         model.addAttribute("description", product.getDescription());
         model.addAttribute("title", product.getName());
