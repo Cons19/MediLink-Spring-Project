@@ -137,6 +137,36 @@ body {
 }
 
 /* Contact Page */
+.contact-page {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.contact-page h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.contact-page .description {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.contact {
+    width: 600px;
+    text-align: center;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.contact p {
+    margin-top: 30px;
+}
+
 .pill-custom {
     border-radius: 5px;
     padding: 8px;
@@ -157,9 +187,23 @@ body {
     color: #212529;
 }
 
-.contact p {
-    margin-top: 30px;
+.pill-custom.green {
+    background-color: rgba(40, 167, 69, 0.21);
+    border-radius: 5px;
+    border: 1px solid #28a745;
+    color: #28a745;
 }
+
+.pill-custom.green a,
+.pill-custom.green a:hover,
+.pill-custom.green a:active {
+    color: #28a745;
+}
+
+.text-green {
+    color: #28a745;
+}
+
 
 
 /* Q&A */

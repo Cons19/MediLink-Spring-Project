@@ -15,28 +15,31 @@
 <!--Header Fragment-->
 <div th:insert="/page-fragments :: header('contact')"></div>
 
+
+<!--Body-->
 <div class="container">
-
-    <p>Here you can find more information about us.
-        Please feel free to contact us if you have any questions!
-    </p>
-
-    <div class="contact">
-
-        <p>
-            <span class="pill-custom blue">Mail</span>
-            <span><a class="pill-custom grey" href="mailto:medilink@medilink.dk">medilink@medilink.dk</a><br/></span>
-        </p>
-        <p>
-            <span class="pill-custom blue">Phone number</span>
-            <span class="pill-custom grey">(+45) 7022 3015</span>
-        </p>
-        <p>
-            <span class="pill-custom blue">Address</span>
-            <span class="pill-custom grey">Denmark, Copenhagen, ... </span>
-        </p>
+    <div class="contact-page">
+        <h1>Contact</h1>
+        <div class="description">
+            <p>Here you can find more information about us.</p>
+            <p>Please feel free to contact us if you have any questions!</p>
+            <p class="text-green">Press the email button to open your email app</p>
+        </div>
+        <div class="contact center">
+            <p>
+                <span class="pill-custom blue">Mail</span>
+                <span class="pill-custom green"><a href="mailto:medilink@medilink.dk">medilink@medilink.dk</a></span>
+            </p>
+            <p>
+                <span class="pill-custom blue">Phone number</span>
+                <span class="pill-custom grey">(+45) 7022 3015</span>
+            </p>
+            <p>
+                <span class="pill-custom blue">Address</span>
+                <span class="pill-custom grey">Denmark, Copenhagen, ... </span>
+            </p>
+        </div>
     </div>
-
 </div>
 
 
