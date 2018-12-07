@@ -285,4 +285,37 @@ button:active {
 }
 
 
+/* HOME */
+
+.home {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.home h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.home .description {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.home .description .location {
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.home .map {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
 
