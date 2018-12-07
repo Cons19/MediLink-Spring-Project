@@ -23,13 +23,12 @@ public class ProductController {
     @GetMapping("/products")
     public String products() {
 
-        product1.setDescription(productsRepository.returnDescription(product1.getId()));
-        product2.setDescription(productsRepository.returnDescription(product2.getId()));
-        product3.setDescription(productsRepository.returnDescription(product3.getId()));
-        product6.setDescription(productsRepository.returnDescription(product6.getId()));
-        product4.setDescription(productsRepository.returnDescription(product4.getId()));
-        product5.setDescription(productsRepository.returnDescription(product5.getId()));
-        product6.setDescription(productsRepository.returnDescription(product6.getId()));
+        product1.setDescription(productsRepository.read(product1.getId()).getDescription());
+        product2.setDescription(productsRepository.read(product2.getId()).getDescription());
+        product3.setDescription(productsRepository.read(product3.getId()).getDescription());
+        product4.setDescription(productsRepository.read(product4.getId()).getDescription());
+        product5.setDescription(productsRepository.read(product5.getId()).getDescription());
+        product6.setDescription(productsRepository.read(product6.getId()).getDescription());
 
         return "products";
     }
