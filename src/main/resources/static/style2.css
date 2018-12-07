@@ -152,11 +152,12 @@ body {
 /* Footer */
 
 .footer-custom {
-    height: 200px;
-    padding-top: 50px;
+    height: 250px;
+    padding-top: 30px;
     border-top: 2px solid #007bff;
     margin-right: 10px;
     margin-left: 10px;
+    background-color: rgba(169, 226, 255, 0.17);
 }
 
 .footer-custom .footer-left {
@@ -171,6 +172,25 @@ body {
 .footer-custom .footer-right {
     margin-left: 30px;
 }
+
+.footer-custom .footer-right ul {
+    list-style: none;
+}
+
+.footer-custom .footer-right li {
+    margin-top: 10px;
+}
+
+.footer-custom .footer-right li span {
+    margin-left: 10px;
+}
+
+.footer-custom .icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Accordion */
 
 .accordion {
     background-color: #007bff;
