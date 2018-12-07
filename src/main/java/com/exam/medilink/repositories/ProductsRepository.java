@@ -6,6 +6,9 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class ProductsRepository extends AbstractCrudRepository<Product> {
+    private static final String FILE_SEPARATOR = System.getProperty("file.separator");
+    private static final String DIR = "src" + FILE_SEPARATOR + "main" + FILE_SEPARATOR + "resources" + FILE_SEPARATOR + "static" + FILE_SEPARATOR + "product files" + FILE_SEPARATOR + "";
+
     private static ProductsRepository instance;
     public static  ProductsRepository getInstance() {
         if (instance == null) {
@@ -32,8 +35,7 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
         Product product = new Product();
         String description = "";
         String line;
-        File file = new File("src\\main\\resources\\static\\product files\\" + id + ".txt");
-
+        File file = new File(DIR + id + ".txt");
         try {
             // FileReader reads text files in the default encoding
             FileReader fileReader = new FileReader(file);
