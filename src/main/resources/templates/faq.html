@@ -16,51 +16,13 @@
 
     <title>Q&A</title>
 
-    <!--<style>-->
-        <!--.accordion {-->
-            <!--background-color: cyan;-->
-            <!--color: #444;-->
-            <!--cursor: pointer;-->
-            <!--padding: 18px;-->
-            <!--width: 100%;-->
-            <!--border: none;-->
-            <!--text-align: left;-->
-            <!--outline: none;-->
-            <!--font-size: 15px;-->
-            <!--transition: 0.4s;-->
-        <!--}-->
-
-        <!--.active, .accordion:hover {-->
-            <!--background-color: #ccc;-->
-        <!--}-->
-
-        <!--.accordion:after {-->
-            <!--content: '\002B';-->
-            <!--color: black;-->
-            <!--font-weight: bold;-->
-            <!--float: right;-->
-            <!--margin-left: 5px;-->
-        <!--}-->
-
-        <!--.active:after {-->
-            <!--content: "\2212";-->
-        <!--}-->
-        <!--.panel {-->
-            <!--padding: 0 18px;-->
-            <!--background-color: white;-->
-            <!--max-height: 0;-->
-            <!--overflow: hidden;-->
-            <!--transition: max-height 0.2s ease-out;-->
-        <!--}-->
-    <!--</style>-->
 </head>
 <body>
 
 <!--Header Fragment-->
 <div th:insert="/page-fragments :: header('faq')"></div>
 
-<div class="container">
-
+<!--<div class="container">
     <div class="accordion" id="accordionExample">
         <div class="card card-accordion-custom">
             <div class="card-header" id="headingOne">
@@ -107,43 +69,42 @@
         </div>
     </div>
 
+</div>-->
+<br><br><h2>Frequently Asked Questions</h2>
+
+<button class="accordion">Q1</button>
+<div class="panel">
+    <p>A1.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
+<button class="accordion">Q2</button>
+<div class="panel">
+    <p>A2.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Q3</button>
+<div class="panel">
+    <p>A3.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div><br><br>
 <!--Footer Fragment-->
 <div th:insert="/page-fragments :: footer"></div>
 
-<!--<h2>Frequently Asked Questions</h2>-->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-<!--<button class="accordion">Q1</button>-->
-<!--<div class="panel">-->
-    <!--<p>A1.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
-<!--</div>-->
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 
-<!--<button class="accordion">Q2</button>-->
-<!--<div class="panel">-->
-    <!--<p>A2.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
-<!--</div>-->
-
-<!--<button class="accordion">Q3</button>-->
-<!--<div class="panel">-->
-    <!--<p>A3.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
-<!--</div>-->
-
-<!--<script>-->
-    <!--var acc = document.getElementsByClassName("accordion");-->
-    <!--var i;-->
-
-    <!--for (i = 0; i < acc.length; i++) {-->
-        <!--acc[i].addEventListener("click", function() {-->
-            <!--this.classList.toggle("active");-->
-            <!--var panel = this.nextElementSibling;-->
-            <!--if (panel.style.maxHeight){-->
-                <!--panel.style.maxHeight = null;-->
-            <!--} else {-->
-                <!--panel.style.maxHeight = panel.scrollHeight + "px";-->
-            <!--}-->
-        <!--});-->
-    <!--}-->
-<!--</script>-->
 </body>
 </html>
