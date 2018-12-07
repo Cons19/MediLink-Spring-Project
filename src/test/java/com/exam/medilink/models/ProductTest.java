@@ -40,5 +40,4 @@ public class ProductTest {
         product.setDescription("Forever and ever best product!");
         assertEquals("Forever and ever best product!", product.getDescription());
     }
-
 }

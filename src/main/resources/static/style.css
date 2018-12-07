@@ -1,76 +1,76 @@
-.footer {
-    display: block;
-    background-color: cyan;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-p {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    transition-property: right, left;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 10s;
-    -webkit-animation-direction: alternate-reverse;
-    animation-name: example;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-}
+/*.footer {*/
+    /*display: block;*/
+    /*background-color: cyan;*/
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+/*}*/
+/*p {*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*position: relative;*/
+    /*transition-property: right, left;*/
+    /*-webkit-animation-name: example; !* Safari 4.0 - 8.0 *!*/
+    /*-webkit-animation-duration: 10s;*/
+    /*-webkit-animation-direction: alternate-reverse;*/
+    /*animation-name: example;*/
+    /*animation-duration: 10s;*/
+    /*animation-iteration-count: infinite;*/
+    /*animation-direction: alternate-reverse;*/
+/*}*/
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-    0%   {left:0px; top:0px;}
-    25%  {left:85%; top:0px;}
-    100% {left:0px; top:0px;}
-}
+/*!* Safari 4.0 - 8.0 *!*/
+/*@-webkit-keyframes example {*/
+    /*0%   {left:0px; top:0px;}*/
+    /*25%  {left:85%; top:0px;}*/
+    /*100% {left:0px; top:0px;}*/
+/*}*/
 
-/* Standard syntax */
-@keyframes example {
-    0%   {left:0px; top:0px;}
-    25%  {left:85%;  top:0px;}
-    100% {left:0px; top:0px;}
-}
-.contact {
-    background-color: lightgrey;
-    width: 175px;
-    border: 1px solid green;
-    padding: 10px;
-    margin: 10px;
-}
+/*!* Standard syntax *!*/
+/*@keyframes example {*/
+    /*0%   {left:0px; top:0px;}*/
+    /*25%  {left:85%;  top:0px;}*/
+    /*100% {left:0px; top:0px;}*/
+/*}*/
+/*.contact {*/
+    /*background-color: lightgrey;*/
+    /*width: 175px;*/
+    /*border: 1px solid green;*/
+    /*padding: 10px;*/
+    /*margin: 10px;*/
+/*}*/
 
-.social-icon {
-    width: 45px;
-    height: 45px;
-    transition: all 0.5s;
-    display: inline-block;
-    color:transparent;
-}
+/*.social-icon {*/
+    /*width: 45px;*/
+    /*height: 45px;*/
+    /*transition: all 0.5s;*/
+    /*display: inline-block;*/
+    /*color:transparent;*/
+/*}*/
 
-.social-icon:last-child {
-    margin-right: 0px;
-}
-.social-icon.facebook {
-    background-image: url('images/facebook-hover.png');
-    background: transparent url('images/facebook.png') no-repeat center center;
-    color:black;
-}
+/*.social-icon:last-child {*/
+    /*margin-right: 0px;*/
+/*}*/
+/*.social-icon.facebook {*/
+    /*background-image: url('images/facebook-hover.png');*/
+    /*background: transparent url('images/facebook.png') no-repeat center center;*/
+    /*color:black;*/
+/*}*/
 
-.social-icon.facebook:hover {
-    background: transparent url('images/facebook-hover.png') no-repeat center center;
-    color:blue;
-}
+/*.social-icon.facebook:hover {*/
+    /*background: transparent url('images/facebook-hover.png') no-repeat center center;*/
+    /*color:blue;*/
+/*}*/
 
-.social-icon.linkedin {
-    background-image: url('images/linkedin-hover.png');
-    background: transparent url('images/linkedin.png') no-repeat center center;
-    color:black;
-}
+/*.social-icon.linkedin {*/
+    /*background-image: url('images/linkedin-hover.png');*/
+    /*background: transparent url('images/linkedin.png') no-repeat center center;*/
+    /*color:black;*/
+/*}*/
 
-.social-icon.linkedin:hover {
-    background: transparent url('images/linkedin-hover.png') no-repeat center center;
-    color:blue;
-}
+/*.social-icon.linkedin:hover {*/
+    /*background: transparent url('images/linkedin-hover.png') no-repeat center center;*/
+    /*color:blue;*/
+/*}*/

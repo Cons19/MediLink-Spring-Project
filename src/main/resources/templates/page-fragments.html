@@ -5,19 +5,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
     <link rel="stylesheet" href="/style2.css">
-
 </head>
 <body>
+
 <div th:fragment="header(activePage)">
     <ul class="nav nav-pills nav-fill">
         <li th:class="'nav-item'  + ${activePage == 'index' ? ' item-logo' : ''}">
             <a th:class="'nav-link logo'" href="/"><img src="images/medilink.png"></a>
         </li>
-        <!--<li class="nav-item">-->
-            <!--<a th:class="'nav-link' + ${activePage == 'index' ? ' active' : ''}" href="index">Medilink</a>-->
-        <!--</li>-->
         <li class="nav-item">
              <a th:class="'nav-link' + ${activePage == 'products' ? ' active' : ''}" href="products">Products</a>
         </li>
@@ -42,8 +38,6 @@
 </div>
 
 <div th:fragment="footer" class="footer">
-
-
     <div class="footer-custom">
         <div class="row">
             <div class="col">
