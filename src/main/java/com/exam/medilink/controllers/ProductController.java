@@ -54,7 +54,7 @@ public class ProductController {
     public String products(Model model) {
 
         model.addAttribute("productsList", productsRepository.readAll());
-
+//test
         return "products";
     }
 
