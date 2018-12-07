@@ -12,10 +12,13 @@
 <body>
 <div th:fragment="header(activePage)">
     <ul class="nav nav-pills nav-fill">
-        <li class="nav-item">
-            <a th:class="'nav-link' + ${activePage == 'index' ? ' active' : ''}" href="/">MediLink</a>
+        <li th:class="'nav-item'  + ${activePage == 'index' ? ' item-logo' : ''}">
+            <a th:class="'nav-link logo'" href="/"><img src="images/medilink.png"></a>
         </li>
-         <li class="nav-item">
+        <!--<li class="nav-item">-->
+            <!--<a th:class="'nav-link' + ${activePage == 'index' ? ' active' : ''}" href="index">Medilink</a>-->
+        <!--</li>-->
+        <li class="nav-item">
              <a th:class="'nav-link' + ${activePage == 'products' ? ' active' : ''}" href="products">Products</a>
         </li>
         <li class="nav-item">
