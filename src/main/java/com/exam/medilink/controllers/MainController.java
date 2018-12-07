@@ -15,9 +15,9 @@ public class MainController {
     private CrudRepository<User> userRepository;
     private User administrator;
 
-    @GetMapping("/about")
-    public String about() {
-        return "about";
+    @GetMapping("/")
+    public String index() {
+        return "index";
     }
 
     @GetMapping("/contact")
