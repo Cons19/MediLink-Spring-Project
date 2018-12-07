@@ -73,9 +73,4 @@ public class MainController {
     public String team() {
         return "team";
     }
-
-    @GetMapping("/search")
-    public String search() {
-        return "search";
-    }
 }
