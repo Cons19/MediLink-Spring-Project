@@ -37,8 +37,8 @@ public class ProductTest {
 
     @Test
     public void setDescription() {
-        product.setDescription("Forever and ever best product");
-        assertEquals("Forever and ever best product", product.getDescription());
+        product.setDescription("Forever and ever best product!");
+        assertEquals("Forever and ever best product!", product.getDescription());
     }
 
 }
