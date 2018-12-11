@@ -40,12 +40,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/de.sven-jacobs/loremipsum -->
+        <!-- https://mvnrepository.com/artifact/com.thedeanda/lorem -->
         <dependency>
-            <groupId>de.sven-jacobs</groupId>
-            <artifactId>loremipsum</artifactId>
-            <version>1.0</version>
-            <scope>test</scope>
+            <groupId>com.thedeanda</groupId>
+            <artifactId>lorem</artifactId>
+            <version>1.2</version>
         </dependency>
 
     </dependencies>
