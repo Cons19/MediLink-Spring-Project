@@ -14,8 +14,8 @@ public class NewsController
 
         List<News> placeholderNews = new ArrayList<>();
         {
-            String[] names = new String[]{"First News", "Second News", "Third News", "Fourth News",
-                    "Fifth Newss", "Sixth News"};
+            String[] names = new String[]{"First news", "Second news", "Third news", "Fourth news",
+                    "Fifth news", "Sixth news"};
 
             Lorem lorem = LoremIpsum.getInstance();
 
