@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class ProductController {
@@ -23,12 +24,14 @@ public class ProductController {
             String[] names = new String[]{"First product", "Second product", "Third product", "Fourth product",
                     "Fifth products", "Sixth product"};
             for (int i = 0; i < names.length; i++) {
-                placeholderProducts.add(new Product(i, names[i]));
+                placeholderProducts.add(new Product(placeholderProducts.size(), names[i]));
             }
         }
 
         @Override
         public int create(Product item) {
+            item.setId(placeholderProducts.size());
+            placeholderProducts.add(item);
             return 0;
         }
 
@@ -44,12 +47,30 @@ public class ProductController {
 
         @Override
         public boolean update(Product item) {
-            return false;
+            Product oldProd;
+            try {
+                oldProd = placeholderProducts.get(item.getId());
+            } catch (IndexOutOfBoundsException e) {
+                return false;
+            }
+            oldProd.setName(item.getName());
+            oldProd.setDescription(item.getDescription());
+            return true;
         }
 
+        @SuppressWarnings("Duplicates")
         @Override
         public boolean delete(int id) {
-            return false;
+            //setting to null instead of removing so the ids of the products remain unchanged
+            try {
+                //noinspection ResultOfMethodCallIgnored
+                placeholderProducts.get(id);
+            } catch (IndexOutOfBoundsException e) {
+                return false;
+            }
+
+            placeholderProducts.set(id, null);
+            return true;
         }
     };
 
