@@ -5,7 +5,7 @@ import com.exam.medilink.repositories.util.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.util.List;
 
 abstract class AbstractCrudRepository<T> implements CrudRepository<T>{
     //minimum time that should have passed since the last refresh
@@ -19,7 +19,7 @@ abstract class AbstractCrudRepository<T> implements CrudRepository<T>{
     static ResultSet resultSet;
 
     public abstract int create(T item);
-    public abstract ArrayList<T> readAll();
+    public abstract List<T> readAll();
     public abstract T read(int id);
     public abstract boolean update(T item);
     public abstract boolean delete(int id);

@@ -2,7 +2,7 @@ package com.exam.medilink.repositories;
 
 import com.exam.medilink.models.User;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class UsersRepository extends AbstractCrudRepository<User> {
     private static UsersRepository instance;
@@ -20,7 +20,7 @@ public class UsersRepository extends AbstractCrudRepository<User> {
     }
 
     @Override
-    public ArrayList<User> readAll() {
+    public List<User> readAll() {
         throw new UnsupportedOperationException();
     }
 

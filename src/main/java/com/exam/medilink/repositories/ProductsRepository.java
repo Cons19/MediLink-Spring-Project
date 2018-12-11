@@ -3,7 +3,7 @@ package com.exam.medilink.repositories;
 import com.exam.medilink.models.Product;
 
 import java.io.*;
-import java.util.ArrayList;
+import java.util.List;
 
 public class ProductsRepository extends AbstractCrudRepository<Product> {
     private static final String FILE_SEPARATOR = System.getProperty("file.separator");
@@ -24,7 +24,7 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
     }
 
     @Override
-    public ArrayList<Product> readAll()
+    public List<Product> readAll()
     {
         throw new UnsupportedOperationException();
     }

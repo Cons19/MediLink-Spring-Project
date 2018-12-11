@@ -1,6 +1,6 @@
 package com.exam.medilink.repositories;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface CrudRepository<T> {
 
@@ -9,7 +9,7 @@ public interface CrudRepository<T> {
     int create(T item);
 
     //Reads all the elements of the table
-    ArrayList<T> readAll();
+    List<T> readAll();
 
     //Reads a specific element from the table
     T read(int id);

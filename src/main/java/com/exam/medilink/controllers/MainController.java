@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -37,7 +37,7 @@ public class MainController {
             administrator = null;
         }
 
-        ArrayList<User> users = userRepository.readAll();
+        List<User> users = userRepository.readAll();
         for (User user : users) {
             if (user.getPassword().equals(password)) {
                 administrator = user;

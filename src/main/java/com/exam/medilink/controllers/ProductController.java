@@ -18,7 +18,7 @@ public class ProductController {
 
     private CrudRepository<Product> productsRepository = new CrudRepository<Product>() {
 
-        ArrayList<Product> placeholderProducts = new ArrayList<>();
+        List<Product> placeholderProducts = new ArrayList<>();
         {
             String[] names = new String[]{"First product", "Second product", "Third product", "Fourth product",
                     "Fifth products", "Sixth product"};
@@ -33,7 +33,7 @@ public class ProductController {
         }
 
         @Override
-        public ArrayList<Product> readAll() {
+        public List<Product> readAll() {
             return placeholderProducts;
         }
 
@@ -75,8 +75,8 @@ public class ProductController {
 
     @PostMapping("/search")
     public String search(@RequestParam("q") String filter, Model model) {
-        ArrayList<Product> productList = productsRepository.readAll();
-        ArrayList<Product> filteredList = new ArrayList<>();
+        List<Product> productList = productsRepository.readAll();
+        List<Product> filteredList = new ArrayList<>();
 
         if (filter.isEmpty()) {
             filteredList = productList;

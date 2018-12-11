@@ -2,7 +2,7 @@ package com.exam.medilink.repositories;
 
 import com.exam.medilink.models.News;
 
-import java.util.ArrayList;
+import java.util.List;
 
 //#Razvan
 //Repository connecting to the database of the Motorhome model
@@ -22,7 +22,7 @@ public class NewsRepository extends AbstractCrudRepository<News> {
     }
 
     @Override
-    public ArrayList<News> readAll() {
+    public List<News> readAll() {
         throw new UnsupportedOperationException();
     }
 
