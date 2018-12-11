@@ -22,7 +22,7 @@ public class ProductController {
         List<Product> placeholderProducts = new ArrayList<>();
         {
             String[] names = new String[]{"First product", "Second product", "Third product", "Fourth product",
-                    "Fifth products", "Sixth product"};
+                    "Fifth product", "Sixth product"};
             for (int i = 0; i < names.length; i++) {
                 placeholderProducts.add(new Product(placeholderProducts.size(), names[i]));
             }
