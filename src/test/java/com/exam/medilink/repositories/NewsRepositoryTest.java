@@ -23,12 +23,9 @@ public class NewsRepositoryTest {
         mLorem = LoremIpsum.getInstance();
         mPlaceholderNews = new ArrayList<>();
 
-        String[] names = new String[]{"First news", "Second news", "Third news", "Fourth news",
-                "Fifth news", "Sixth news"};
-
         Lorem lorem = LoremIpsum.getInstance();
-        for (String name : names) {
-            mPlaceholderNews.add(new News(mPlaceholderNews.size(), name, lorem.getParagraphs(1, 4)));
+        for (int i = 0; i < 10; i++) {
+            mPlaceholderNews.add(new News(mPlaceholderNews.size(), lorem.getTitle(5, 10), lorem.getParagraphs(1, 4)));
         }
 
         mNewsCrudRepository.saveItems(mPlaceholderNews);

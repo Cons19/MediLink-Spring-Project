@@ -3,6 +3,8 @@ package com.exam.medilink.controllers;
 import com.exam.medilink.models.Product;
 import com.exam.medilink.repositories.CrudRepository;
 import com.exam.medilink.repositories.ProductsRepository;
+import com.thedeanda.lorem.Lorem;
+import com.thedeanda.lorem.LoremIpsum;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,10 +23,9 @@ public class ProductController {
 
         List<Product> placeholderProducts = new ArrayList<>();
         {
-            String[] names = new String[]{"First product", "Second product", "Third product", "Fourth product",
-                    "Fifth product", "Sixth product"};
-            for (int i = 0; i < names.length; i++) {
-                placeholderProducts.add(new Product(placeholderProducts.size(), names[i]));
+            Lorem lorem = LoremIpsum.getInstance();
+            for (int i = 0; i < 10; i++) {
+                placeholderProducts.add(new Product(placeholderProducts.size(), lorem.getTitle(1, 4),lorem.getParagraphs(1, 2)));
             }
         }
 

@@ -1,7 +1,6 @@
 package com.exam.medilink.controllers;
 
 import com.exam.medilink.models.News;
-import com.exam.medilink.models.Product;
 import com.exam.medilink.repositories.CrudRepository;
 import com.thedeanda.lorem.Lorem;
 import com.thedeanda.lorem.LoremIpsum;
@@ -21,15 +20,10 @@ public class NewsController
 
         List<News> placeholderNews = new ArrayList<>();
         {
-            String[] names = new String[]{"First news", "Second news", "Third news", "Fourth news",
-                    "Fifth news", "Sixth news"};
-
             Lorem lorem = LoremIpsum.getInstance();
-
-            for (int i = 0; i < names.length; i++) {
-                placeholderNews.add(new News(placeholderNews.size(), names[i], lorem.getParagraphs(1, 4)));
+            for (int i = 0; i < 10; i++) {
+                placeholderNews.add(new News(placeholderNews.size(), lorem.getTitle(5, 10), lorem.getParagraphs(1, 4)));
             }
-
         }
 
         @Override
