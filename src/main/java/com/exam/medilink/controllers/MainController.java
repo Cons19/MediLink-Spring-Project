@@ -8,11 +8,45 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class MainController {
-    private CrudRepository<User> userRepository;
+    private CrudRepository<User> userRepository = new CrudRepository<User>() {
+        List<User> userList = new ArrayList<>();
+        {
+            userList.add(new User("iluvcatz"));
+            userList.add(new User("bushdid911"));
+            userList.add(new User("dindunuffin"));
+            userList.add(new User("fuckingpassword"));
+        }
+        @Override
+        public int create(User item) {
+            return -1;
+        }
+
+        @Override
+        public List<User> readAll() {
+            return userList;
+        }
+
+        @Override
+        public User read(int id) {
+            return userList.get(id);
+        }
+
+        @Override
+        public boolean update(User item) {
+            return false;
+        }
+
+        @Override
+        public boolean delete(int id) {
+            return false;
+        }
+    };
+
     private User administrator;
 
     @GetMapping("/")
