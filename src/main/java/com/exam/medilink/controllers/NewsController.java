@@ -1,15 +1,22 @@
 package com.exam.medilink.controllers;
 
 import com.exam.medilink.models.News;
+import com.exam.medilink.models.Product;
 import com.exam.medilink.repositories.CrudRepository;
 import com.thedeanda.lorem.Lorem;
 import com.thedeanda.lorem.LoremIpsum;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Controller
 public class NewsController
 {
+
     private CrudRepository<News> newsRepository = new CrudRepository<News>() {
 
         List<News> placeholderNews = new ArrayList<>();
@@ -51,7 +58,7 @@ public class NewsController
                 return false;
             }
             oldNews.setTitle(item.getTitle());
-            oldNews.setBody(item.getBody());
+            oldNews.setDescription(item.getDescription());
             return true;
         }
 
@@ -70,5 +77,26 @@ public class NewsController
             return true;
         }
     };
+
+
+    @GetMapping("/news")
+    public String news(Model model) {
+
+        model.addAttribute("newsList", newsRepository.readAll());
+        return "news";
+    }
+
+    @GetMapping("/newsArticle")
+    public String newsArticle(@RequestParam("id") int id, Model model) {
+
+        News news = newsRepository.read(id);
+        news.setTitle(newsRepository.read(id).getTitle());
+
+        model.addAttribute("description", news.getDescription());
+        model.addAttribute("title", news.getTitle());
+
+        return "newsArticle";
+    }
+
 
 }

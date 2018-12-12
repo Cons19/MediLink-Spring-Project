@@ -32,11 +32,11 @@ public class News {
         this.title = title;
     }
 
-    public String getBody() {
+    public String getDescription() {
         return description;
     }
 
-    public void setBody(String body) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
