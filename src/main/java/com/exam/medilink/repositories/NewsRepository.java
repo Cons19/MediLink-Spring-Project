@@ -4,8 +4,6 @@ import com.exam.medilink.models.News;
 
 import java.util.List;
 
-//#Razvan
-//Repository connecting to the database of the Motorhome model
 public class NewsRepository extends AbstractCrudRepository<News> {
     private static NewsRepository instance;
     public static  NewsRepository getInstance() {
@@ -40,4 +38,10 @@ public class NewsRepository extends AbstractCrudRepository<News> {
     public boolean delete(int id) {
         throw new UnsupportedOperationException();
     }
+
+    @Override
+    String getItemsFileName() {
+        return "news";
+    }
+
 }

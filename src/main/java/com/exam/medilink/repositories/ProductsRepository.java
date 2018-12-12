@@ -20,7 +20,7 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
 
     @Override
     public int create(Product item) {
-        return 0;
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -68,5 +68,10 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
     @Override
     public boolean delete(int id) {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    String getItemsFileName() {
+        return "products";
     }
 }

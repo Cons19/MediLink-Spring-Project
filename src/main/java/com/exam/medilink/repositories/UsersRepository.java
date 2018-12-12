@@ -38,4 +38,9 @@ public class UsersRepository extends AbstractCrudRepository<User> {
     public boolean delete(int id) {
         throw new UnsupportedOperationException();
     }
+
+    @Override
+    String getItemsFileName() {
+        return "users";
+    }
 }
