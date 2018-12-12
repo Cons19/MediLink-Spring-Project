@@ -5,7 +5,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/style2.css">
-    <title>News</title>
+    <title>News Article</title>
 </head>
 <body>
 
@@ -14,18 +14,15 @@
 
 <!--Body-->
 <div class="container">
-    <div class="product-page">
-        <h1>Latest News</h1>
-        <th:block th:each="news : ${newsList}">
-            <div class="card products">
-                <!--<img class="card-img-top" src="images/product.png">-->
-                <div class="card-body">
-                    <h5 class="card-title" th:text="${news.title}"></h5>
-                    <p class="card-text">News Article ............</p>
-                    <a th:href="@{/newsArticle(id=${news.id})}" class="btn btn-primary">Read More...</a>
-                </div>
-            </div>
-        </th:block>
+    <div class="card card-big">
+        <!--<img class="card-img-top center" src="images/product.png">-->
+        <div class="card-body">
+            <h5 class="card-title" th:text="${title}"> </h5>
+            <tr th:each="dv: ${description}" class="card-text">
+                <!--<p th:text="${dv}"></p>-->
+                <div class="text" th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(dv),'\n','&lt;br /&gt;'))}"></div>
+            </tr>
+        </div>
     </div>
 </div>
 

@@ -95,7 +95,7 @@ public class NewsController
         model.addAttribute("description", news.getDescription());
         model.addAttribute("title", news.getTitle());
 
-        return "newsArticle";
+        return "news-article";
     }
 
 
