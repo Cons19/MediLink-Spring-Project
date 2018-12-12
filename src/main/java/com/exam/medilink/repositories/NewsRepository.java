@@ -16,17 +16,24 @@ public class NewsRepository extends AbstractCrudRepository<News> {
 
     @Override
     public int create(News item) {
-        throw new UnsupportedOperationException();
+
+        List<News> newsList = loadItems();
+
+        newsList.add(item);
+        saveItems(newsList);
+        newsList = loadItems();
+
+        return newsList.indexOf(item);
     }
 
     @Override
     public List<News> readAll() {
-        throw new UnsupportedOperationException();
+        return loadItems();
     }
 
     @Override
     public News read(int id) {
-        throw new UnsupportedOperationException();
+        return loadItems().get(id);
     }
 
     @Override
