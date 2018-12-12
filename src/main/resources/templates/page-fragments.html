@@ -27,7 +27,7 @@
             <a th:class="'nav-link' + ${activePage == 'faq' ? ' active' : ''}" href="faq">FAQ</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link disabled" href="#">News</a>
+            <a th:class="'nav-link' + ${activePage == 'news' ? ' active' : ''}" href="news">News</a>
         </li>
         <li>
             <form action="/search" method="post">
