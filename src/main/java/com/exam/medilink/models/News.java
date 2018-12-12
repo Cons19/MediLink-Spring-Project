@@ -1,19 +1,19 @@
 package com.exam.medilink.models;
 
 public class News {
-    //title, body
+    //title, description
     private int id;
     private String title;
-    private String body;
+    private String description;
 
     public News() {
 
     }
 
-    public News(int id, String title, String body) {
+    public News(int id, String title, String description) {
         this.id = id;
         this.title = title;
-        this.body = body;
+        this.description = description;
     }
 
     public int getId() {
@@ -33,11 +33,11 @@ public class News {
     }
 
     public String getBody() {
-        return body;
+        return description;
     }
 
     public void setBody(String body) {
-        this.body = body;
+        this.description = description;
     }
 
 }

@@ -22,6 +22,7 @@ public class NewsController
             for (int i = 0; i < names.length; i++) {
                 placeholderNews.add(new News(placeholderNews.size(), names[i], lorem.getParagraphs(1, 4)));
             }
+
         }
 
         @Override
