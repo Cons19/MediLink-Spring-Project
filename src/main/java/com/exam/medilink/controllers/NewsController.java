@@ -72,6 +72,10 @@ public class NewsController
         }
     };
 
+//    {
+//        //uncomment these lines to use the actual repository
+//        newsRepository = NewsRepository.getInstance();
+//    }
 
     @GetMapping("/news")
     public String news(Model model) {

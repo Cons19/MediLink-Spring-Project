@@ -75,6 +75,11 @@ public class ProductController {
         }
     };
 
+//    {
+//        //uncomment these lines to use the actual repository
+//        productsRepository = ProductsRepository.getInstance();
+//    }
+
     @GetMapping("/products")
     public String products(Model model) {
 

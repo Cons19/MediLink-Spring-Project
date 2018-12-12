@@ -7,39 +7,64 @@ import java.util.List;
 abstract class AbstractCrudRepository<T> implements CrudRepository<T>{
     private final String ITEMS_FILE_NAME = getItemsFileName() + ".bin";
 
-    public abstract int create(T item);
-    public abstract List<T> readAll();
-    public abstract T read(int id);
-    public abstract boolean update(T item);
-    public abstract boolean delete(int id);
+    AbstractCrudRepository() {
+
+    }
+
+    @Override
+    public int create(T item) {
+        List<T> itemsList = loadItems();
+
+        itemsList.add(item);
+        saveItems(itemsList);
+        itemsList = loadItems();
+
+        return itemsList.indexOf(item);
+    }
+
+    @Override
+    public List<T> readAll() {
+        return loadItems();
+    }
+    @Override
+    public T read(int id) {
+        return loadItems().get(id);
+    }
+    @Override
+    public boolean update(T item) {
+        throw new UnsupportedOperationException();
+    }
+    @Override
+    public boolean delete(int id) {
+        throw new UnsupportedOperationException();
+    }
 
 
     abstract String getItemsFileName();
 
-    public boolean saveItems(List<T> newsList) {
+    void saveItems(List<T> itemList) {
         try (
                 FileOutputStream fos = new FileOutputStream(ITEMS_FILE_NAME);
                 ObjectOutputStream oos = new ObjectOutputStream(fos)
         ) {
-            oos.writeObject(newsList);
+            oos.writeObject(itemList);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return true;
     }
 
-    public List<T> loadItems() {
-        List<T> newsList;
+    private List<T> loadItems() {
+        List<T> itemList;
         try (
                 FileInputStream fis = new FileInputStream(ITEMS_FILE_NAME);
                 ObjectInputStream ois = new ObjectInputStream(fis)
         ) {
-            newsList = (List<T>) ois.readObject();
+            itemList = (List<T>) ois.readObject();
 
         } catch (IOException | ClassNotFoundException e) {
-            newsList = new ArrayList<>();
+            itemList = new ArrayList<>();
         }
 
-        return newsList;
+        return itemList;
     }
 }
