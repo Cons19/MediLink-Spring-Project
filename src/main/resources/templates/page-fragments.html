@@ -42,25 +42,16 @@
             </form>
         </li>
         <li class="nav-item">
-            <!--<a th:class="'nav-link' + ${activePage == 'language' ? ' active' : ''}" href="news">Language (EN/DK)</a>-->
-
             <div class="btn-group drop-down-custom">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Languages
-                </button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                th:text="${#locale.displayName}"></button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">English</a>
-                    <a class="dropdown-item" href="#">Danish</a>
-                    <a class="dropdown-item" href="#">Spanish</a>
-                    <a class="dropdown-item" href="#">Portuguese</a>
+                    <a class="dropdown-item" th:href="@{/(lang=${#locale.ENGLISH})}" th:text="${#locale.ENGLISH.displayName}"></a>
+                    <a class="dropdown-item" th:href="@{/(lang=${#locale.forLanguageTag('da')})}" th:text="${#locale.forLanguageTag('da').displayName}"></a>
+                    <a class="dropdown-item" th:href="@{/(lang=${#locale.forLanguageTag('es')})}" th:text="${#locale.forLanguageTag('es').displayName}"></a>
+                    <a class="dropdown-item" th:href="@{/(lang=${#locale.forLanguageTag('pt')})}" th:text="${#locale.forLanguageTag('pt').displayName}"></a>
                 </div>
             </div>
-            <!--<select th:field="*{languages}" required>-->
-                <!--<option value="">&#45;&#45;</option>-->
-                <!--<option th:each="lan : ${languages}"-->
-                        <!--th:value="${lan}"-->
-                        <!--th:text="${lan}"></option>-->
-            <!--</select>-->
         </li>
     </ul>
 </div>
