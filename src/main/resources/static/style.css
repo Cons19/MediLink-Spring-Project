@@ -33,6 +33,13 @@ body {
     text-align: center;
 }
 
+.news .card-text {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .card.products.news {
     text-align: center;
     margin-bottom: 70px;
@@ -434,3 +441,4 @@ button:active {
 .login button {
     margin-top: 20px;
 }
+
