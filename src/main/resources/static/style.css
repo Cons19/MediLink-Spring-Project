@@ -21,7 +21,8 @@ body {
 }
 
 .card {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: inline-flex;
     width: 300px;
     padding: 20px;
     margin: 20px;
@@ -30,6 +31,13 @@ body {
 
 .card.products {
     text-align: center;
+}
+
+.card.products.news {
+    text-align: center;
+    margin-bottom: 70px;
+    display: block;
+    width: 100%;
 }
 
 .card-img-top {
