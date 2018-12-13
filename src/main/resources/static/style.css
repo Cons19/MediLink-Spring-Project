@@ -1,0 +1,374 @@
+body {
+    background-color: #fff;
+}
+
+.container {
+    padding: 20px;
+    padding-top: 50px;
+}
+/* Products page */
+/* Cards */
+
+.product-page {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.product-page h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.card {
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+}
+
+.card.products {
+    text-align: center;
+}
+
+.card-img-top {
+    width: 200px;
+    height: 250px;
+}
+
+.card.card-big {
+    width: 100%;
+}
+
+.card-big .card-img-top {
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Team */
+
+.team-page {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.team-page h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.card.team .card-img-top {
+    width: 260px;
+    height: 100%;
+}
+
+.card .card-title {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card.team .card-text {
+    color: #212529;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card.team .card-body {
+    padding: 0px;
+    padding-top: 20px;
+}
+
+.card-big .card-body {
+    border-top: 1px solid #ccc;
+}
+
+.card-big .card-title {
+    color: #007bff;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-big .card-text {
+    color: #212529;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Nav Bar */
+
+.nav {
+    height: 70px;
+    padding-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+.search-custom {
+    margin-right: 40px;
+}
+
+/* Contact Page */
+
+.contact-page {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.contact-page h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.contact-page .description {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.contact {
+    width: 600px;
+    text-align: center;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.contact p {
+    margin-top: 30px;
+}
+
+.pill-custom {
+    border-radius: 5px;
+    padding: 8px;
+    margin: 8px;
+}
+
+.pill-custom.blue {
+    background-color: #007bff;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    color: #fff;
+}
+
+.pill-custom.grey {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    color: #212529;
+}
+
+.pill-custom.green {
+    background-color: rgba(40, 167, 69, 0.21);
+    border-radius: 5px;
+    border: 1px solid #28a745;
+    color: #28a745;
+}
+
+.pill-custom.green a,
+.pill-custom.green a:hover,
+.pill-custom.green a:active {
+    color: #28a745;
+}
+
+.text-green {
+    color: #28a745;
+}
+
+/* Q&A */
+
+.card-accordion-custom {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+/* Footer */
+
+.footer-custom {
+    height: 200px;
+    padding-top: 30px;
+    border: 2px solid #007bff;
+    /* border-top: 2px solid #007bff; */
+    border-bottom: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgba(169, 226, 255, 0.17);
+}
+
+.footer-custom .footer-left {
+    margin-left: 30px;
+    padding-left: 100px;
+}
+
+.footer-custom .footer-left p {
+    margin-top: 20px;
+}
+
+.footer-custom .footer-right {
+    margin-left: 30px;
+}
+
+.footer-custom .footer-right ul {
+    list-style: none;
+    padding-left: 180px;
+}
+
+.footer-custom .footer-right li {
+    margin-top: 10px;
+}
+
+.footer-custom .footer-right li span {
+    margin-left: 10px;
+}
+
+.footer-custom .icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Logo */
+
+.logo img {
+    width: 120px;
+    margin-top: -3px;
+}
+
+.item-logo {
+    border-bottom: 2px solid #007bff;
+}
+
+/* Accordion */
+
+.faq {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.faq h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.faq .accordion {
+    color: #212529;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    outline: none;
+    transition: 0.4s;
+    text-decoration: none;
+    border-radius: .25rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,.03);
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.accordion:active, .accordion:hover {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #212529;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: "\2212";
+}
+
+.faq .panel {
+    padding: 0 18px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: .25rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.faq .panel {
+    padding: 0 18px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: .25rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.faq .panel p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button:focus,
+button:active {
+    outline: none;
+}
+
+/* HOME */
+
+.home {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.home h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.home .description {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.home .description .location {
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.home .map {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}

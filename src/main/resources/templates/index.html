@@ -2,9 +2,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style2.css">
     <title>Home</title>
 </head>
 <body>
@@ -15,11 +12,11 @@
 <!--Body-->
 <div class="container">
     <div class="home">
-        <h1>About Medilink</h1>
+        <h1>About MediLink</h1>
         <div class="description">
-            <p>MediLink A / S is a Danish family-owned pharmaceutical company that produces, markets and distributes original prescription drugs and medical devices. MediLink was established in 1996 and currently carries out imports and, in particular, exports of 12 products in 10 different countries - all within the EU.</p>
-            <p>MediLink's products range from a wide range of different therapeutic areas, including psychiatry, neurology, dermatology, cardiovascular disease and anemia. All products, their indication and product summary are available under the 'Products' tab.</p>
-            <p>MediLink prioritizes close dialogue with doctors and health professionals in order to optimize and target professional information for professionals, patients and their relatives and is always available with educational materials, patient brochures and training meetings.</p>
+            <p th:text="#{description.p1}"></p>
+            <p th:text="#{description.p2}"></p>
+            <p th:text="#{description.p3}"></p>
             <div class="location">
                 <h4>You can find us here:</h4>
                 <h6>Gammelmosevej 176 A</h6>
