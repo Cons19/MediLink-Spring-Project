@@ -59,9 +59,23 @@ public class ProductsRepositoryTest {
 
     @Test
     public void update() {
+        for (int i = 0; i < mPlaceholderProducts.size(); i++) {
+            Product product = mProductCrudRepository.read(0);
+            product.setName("name: " + i);
+            product.setDescription("description: " + i);
+            mProductCrudRepository.update(product);
+            assertEquals(mProductCrudRepository.read(product.getId()), product);
+        }
     }
 
     @Test
     public void delete() {
+        for (int i = 0; i < mPlaceholderProducts.size(); i++) {
+            mProductCrudRepository.delete(i);
+        }
+        System.out.println(mProductCrudRepository.readAll().toString());
+        for (int i = 0; i < mPlaceholderProducts.size(); i++) {
+            assertNull(mProductCrudRepository.read(i));
+        }
     }
 }
