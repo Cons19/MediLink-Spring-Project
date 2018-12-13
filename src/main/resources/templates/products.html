@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
                 <img class="card-img-top" src="images/product.png">
                 <div class="card-body">
                     <h5 class="card-title" th:text="${product.name}"></h5>
-                    <p class="card-text">We support healthcare professionals in cryosurgery and cryotherapy all over the world.</p>
+                    <p class="card-text" th:text="${product.description}">....</p>
                     <a th:href="@{/product(id=${product.id})}" class="btn btn-primary">Read More...</a>
                 </div>
             </div>

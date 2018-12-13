@@ -33,6 +33,20 @@ body {
     text-align: center;
 }
 
+.card.products .card-text {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.news .card-text {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .card.products.news {
     text-align: center;
     margin-bottom: 70px;
@@ -405,3 +419,33 @@ button:active {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+/* Login Page */
+
+.login-page {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.login-page h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.login-custom {
+    /*width: 300px;*/
+}
+
+.login {
+    width: 550px;
+    text-align: center;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.login button {
+    margin-top: 20px;
+}
+
