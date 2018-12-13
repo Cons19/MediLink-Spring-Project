@@ -7,7 +7,7 @@
 <body>
 
 <!--Header Fragment-->
-<div th:insert="/page-fragments :: header('index')"></div>
+<div th:insert="/page-fragments :: header('index', 'lang')"></div>
 
 <!--Body-->
 <div class="container">
@@ -18,7 +18,7 @@
             <p th:text="#{description.p2}"></p>
             <p th:text="#{description.p3}"></p>
             <div class="location">
-                <h4>You can find us here:</h4>
+                <h4 th:text="#{location.h1}"></h4>
                 <h6>Gammelmosevej 176 A</h6>
                 <h6>DK-2800 Lyngby</h6>
             </div>
