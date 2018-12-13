@@ -121,10 +121,18 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     border-bottom: 2px solid #007bff;
+    background-color: rgb(233, 241, 255);
 }
 
 .search-custom {
-    margin-right: 40px;
+    margin-left: 40px;
+    /*background-color: rgb(233, 241, 255);*/
+    border: 1px solid #007bff;
+    color: #212529;
+}
+
+.drop-down-custom {
+    margin-left: 40px;
 }
 
 /* Contact Page */
@@ -147,7 +155,7 @@ body {
     text-align: center;
 }
 .contact {
-    width: 600px;
+    width: 550px;
     text-align: center;
     border: 1px solid #007bff;
     border-radius: 5px;
@@ -156,7 +164,7 @@ body {
 }
 
 .contact p {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 .pill-custom {
@@ -196,6 +204,19 @@ body {
     color: #28a745;
 }
 
+.pill-custom.left {
+    float: left;
+}
+
+.pill-custom.right {
+    float: right;
+}
+
+.contact-row {
+    width: 100%;
+    display: inline-block;
+}
+
 /* Q&A */
 
 .card-accordion-custom {
@@ -212,11 +233,12 @@ body {
     height: 200px;
     padding-top: 30px;
     border: 2px solid #007bff;
-    /* border-top: 2px solid #007bff; */
     border-bottom: 0px;
     padding-right: 10px;
     padding-left: 10px;
-    background-color: rgba(169, 226, 255, 0.17);
+    background-color: rgb(233, 241, 255);
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .footer-custom .footer-left {
@@ -234,7 +256,10 @@ body {
 
 .footer-custom .footer-right ul {
     list-style: none;
-    padding-left: 180px;
+    /*padding-left: 180px;*/
+    float: right;
+    padding-top: 13px;
+    padding-right: 180px;
 }
 
 .footer-custom .footer-right li {
