@@ -3,7 +3,7 @@ package com.exam.medilink.models;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Product implements Serializable {
+public class Product implements CrudItem, Serializable {
     private int id;
     private String name;
     private String description;
@@ -23,10 +23,12 @@ public class Product implements Serializable {
         this.description = description;
     }
 
+    @Override
     public int getId() {
         return id;
     }
 
+    @Override
     public void setId(int id) {
         this.id = id;
     }
