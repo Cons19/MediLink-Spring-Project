@@ -20,10 +20,10 @@ public class MainController {
     private CrudRepository<User> userRepository = new CrudRepository<User>() {
         List<User> userList = new ArrayList<>();
         {
-            userList.add(new User("iluvcatz"));
-            userList.add(new User("bushdid911"));
-            userList.add(new User("dindunuffin"));
-            userList.add(new User("fuckingpassword"));
+            userList.add(new User("mar"));
+            userList.add(new User("const"));
+            userList.add(new User("dragon"));
+            userList.add(new User("pau"));
         }
         @Override
         public int create(User item) {
@@ -86,9 +86,9 @@ public class MainController {
         }
 
         if (administrator != null) {
-            return "admin-page";
+            return "redirect:/admin-page";
         } else {
-            return "login";
+            return "redirect:/login";
         }
     }
 
@@ -97,7 +97,7 @@ public class MainController {
         if (administrator != null) {
             return "admin-page";
         } else {
-            return "login";
+            return "redirect:/login";
         }
     }
 
@@ -112,9 +112,10 @@ public class MainController {
             } else {
                 return "admin-page";
             }
+//            return "redirect:/page";
             return page;
         } else {
-            return "login";
+            return "redirect:/login";
         }
     }
 

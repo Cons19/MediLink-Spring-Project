@@ -22,9 +22,16 @@
                     <h5 class="card-title" th:text="${product.name}"></h5>
                     <p class="card-text" th:text="${product.description}">....</p>
                     <a th:href="@{/product(id=${product.id})}" class="btn btn-primary">Read More...</a>
+                    <div th:if="${admin}">
+                        <a th:href="@{/product-edit(id=${product.id})}" class="btn btn-primary">Edit</a>
+                        <a th:href="@{/product-delete(id=${product.id})}" class="btn btn-primary">Delete</a>
+                    </div>
                 </div>
             </div>
         </th:block>
+    </div>
+    <div th:if="${admin}">
+        <input type="submit" value="Add Product" class="btn create"/>
     </div>
 </div>
 
