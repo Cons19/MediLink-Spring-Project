@@ -25,7 +25,6 @@ abstract class AbstractCrudRepository<T extends CrudItem> implements CrudReposit
 
         return itemsList.indexOf(item);
     }
-
     @Override
     public List<T> readAll() {
         return loadItems();
@@ -63,7 +62,6 @@ abstract class AbstractCrudRepository<T extends CrudItem> implements CrudReposit
         saveItems(itemsList);
         return true;
     }
-
 
     abstract String getItemsFileName();
 
