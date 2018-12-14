@@ -24,16 +24,16 @@
                         <p class="card-text" th:text="${news.description}">...</p>
                         <a th:href="@{/newsArticle(id=${news.id})}" class="btn btn-primary">Read More...</a>
                         <div th:if="${admin}">
-                            <a th:href="@{/news-edit(id=${news.id})}" class="btn btn-primary orange">Edit</a>
-                            <a th:href="@{/news-delete(id=${news.id})}" class="btn btn-primary red">Delete</a>
+                            <a th:href="@{/news-edit(id=${news.id})}" class="btn btn-warning">Edit</a>
+                            <a th:href="@{/news-delete(id=${news.id})}" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>
             </th:block>
         </th:block>
     </div>
-    <div th:if="${admin}">
-        <a th:href="@{/news-edit(id=-1)}" class="btn btn-primary green">Add News</a>
+    <div th:if="${admin}" class="buttons">
+        <a th:href="@{/news-edit(id=-1)}" class="btn btn-success">Add News</a>
     </div>
 </div>
 

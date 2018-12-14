@@ -55,7 +55,8 @@ public class ProductController {
         model.addAttribute("admin", false);
         model.addAttribute("productsList", filteredList);
 
-        return "products";
+//        return "products";
+        return "redirect:/products";
     }
 
     @GetMapping("/product-edit")
