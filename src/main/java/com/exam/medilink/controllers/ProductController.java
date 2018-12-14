@@ -79,40 +79,12 @@ public class ProductController {
         } else {
             productsRepository.update(product);
         }
-//        return "products";
         return "redirect:/products";
     }
-
-
-//    @GetMapping("/product-create")
-//    public String create( Model model) {
-//
-//        Product item;
-//        item = new Product();
-//        item.setId(-1);
-//        productsRepository.create(item);
-//        model.addAttribute("productItem", item);
-//        return "products";
-////        return "redirect:/product-edit";
-//    }
-//
-//    @PostMapping("/product-create")
-//    public String create(@ModelAttribute("productItem") Product product) {
-//        if (product.getId() == -1) {
-//            productsRepository.create(product);
-//        } else {
-//            productsRepository.update(product);
-//        }
-////        return "products";
-//        return "redirect:/products";
-//    }
-
-
 
     @GetMapping("/product-delete")
     public String delete(@RequestParam("id") int id) {
         productsRepository.delete(id);
-//        return "products";
         return "redirect:/products";
     }
 

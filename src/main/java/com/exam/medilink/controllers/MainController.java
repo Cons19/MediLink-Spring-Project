@@ -52,6 +52,7 @@ public class MainController {
     };
     private CrudRepository<Product> productsRepository = ProductsRepository.getDummyInstance();
     private CrudRepository<News> newsRepository = NewsRepository.getDummyInstance();
+//    private CrudRepository<News> newsRepository = NewsRepository.getDummyInstance();
 
     private User administrator;
 

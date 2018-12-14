@@ -24,8 +24,8 @@
                         <p class="card-text" th:text="${product.description}">....</p>
                         <a th:href="@{/product(id=${product.id})}" class="btn btn-primary">Read More...</a>
                         <div th:if="${admin}">
-                            <a th:href="@{/product-edit(id=${product.id})}" class="btn btn-primary">Edit</a>
-                            <a th:href="@{/product-delete(id=${product.id})}" class="btn btn-primary">Delete</a>
+                            <a th:href="@{/product-edit(id=${product.id})}" class="btn btn-primary orange">Edit</a>
+                            <a th:href="@{/product-delete(id=${product.id})}" class="btn btn-primary red">Delete</a>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
         </th:block>
     </div>
     <div th:if="${admin}">
-        <a th:href="@{/product-edit(id=-1)}" class="btn btn-primary">Add Product</a>
+        <a th:href="@{/product-edit(id=-1)}" class="btn btn-primary green">Add Product</a>
     </div>
 </div>
 
