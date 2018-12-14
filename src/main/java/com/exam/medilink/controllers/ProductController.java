@@ -6,6 +6,7 @@ import com.exam.medilink.repositories.ProductsRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -62,8 +63,24 @@ public class ProductController {
 
     @GetMapping("/product-edit")
     public String edit(@RequestParam("id") int id, Model model) {
-        Product item = (id == -1) ? new Product() : productsRepository.read(id);
+        Product item;
+        if (id == -1) {
+            item = new Product();
+            item.setId(-1);
+        } else {
+            item = productsRepository.read(id);
+        }
         model.addAttribute("productItem", item);
         return "product-edit";
+    }
+
+    @PostMapping("/product-edit")
+    public String edit(@ModelAttribute("productItem") Product product) {
+        if (product.getId() == -1) {
+            productsRepository.create(product);
+        } else {
+            productsRepository.update(product);
+        }
+        return "products";
     }
 }
