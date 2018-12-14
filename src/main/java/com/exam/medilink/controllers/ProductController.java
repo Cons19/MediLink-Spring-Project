@@ -3,8 +3,6 @@ package com.exam.medilink.controllers;
 import com.exam.medilink.models.Product;
 import com.exam.medilink.repositories.CrudRepository;
 import com.exam.medilink.repositories.ProductsRepository;
-import com.thedeanda.lorem.Lorem;
-import com.thedeanda.lorem.LoremIpsum;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,68 +15,9 @@ import java.util.List;
 @Controller
 public class ProductController {
 
-    private ProductsRepository pd = ProductsRepository.getInstance();
-
-    private CrudRepository<Product> productsRepository = new CrudRepository<Product>() {
-
-        List<Product> placeholderProducts = new ArrayList<>();
-        {
-            Lorem lorem = LoremIpsum.getInstance();
-            for (int i = 0; i < 10; i++) {
-                placeholderProducts.add(new Product(placeholderProducts.size(), lorem.getTitle(1, 4),lorem.getParagraphs(1, 2)));
-            }
-        }
-
-        @Override
-        public int create(Product item) {
-            item.setId(placeholderProducts.size());
-            placeholderProducts.add(item);
-            return 0;
-        }
-
-        @Override
-        public List<Product> readAll() {
-            return placeholderProducts;
-        }
-
-        @Override
-        public Product read(int id) {
-            return placeholderProducts.get(id);
-        }
-
-        @Override
-        public boolean update(Product item) {
-            Product oldProd;
-            try {
-                oldProd = placeholderProducts.get(item.getId());
-            } catch (IndexOutOfBoundsException e) {
-                return false;
-            }
-            oldProd.setName(item.getName());
-            oldProd.setDescription(item.getDescription());
-            return true;
-        }
-
-        @SuppressWarnings("Duplicates")
-        @Override
-        public boolean delete(int id) {
-            //setting to null instead of removing so the ids of the products remain unchanged
-            try {
-                //noinspection ResultOfMethodCallIgnored
-                placeholderProducts.get(id);
-            } catch (IndexOutOfBoundsException e) {
-                return false;
-            }
-
-            placeholderProducts.set(id, null);
-            return true;
-        }
-    };
-
-//    {
-//        //uncomment these lines to use the actual repository
-//        productsRepository = ProductsRepository.getInstance();
-//    }
+    private CrudRepository<Product> productsRepository = ProductsRepository.getDummyInstance();
+    //uncomment this line to use the actual repository
+//    private CrudRepository<Product> productsRepository = ProductsRepository.getInstance();
 
     @GetMapping("/products")
     public String products(Model model) {
@@ -91,11 +30,11 @@ public class ProductController {
     @GetMapping("/product")
     public String product(@RequestParam("id") int id, Model model) {
 
-        Product product = pd.read(id);
-        product.setName(productsRepository.read(id).getName());
+        Product product = productsRepository.read(id);
+//        product.setName(productsRepository.read(id).getName());
 
-        model.addAttribute("description", product.getDescription());
         model.addAttribute("title", product.getName());
+        model.addAttribute("description", product.getDescription());
 
         return "product";
     }
