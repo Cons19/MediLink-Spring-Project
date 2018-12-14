@@ -16,16 +16,14 @@ import java.util.List;
 @Controller
 public class ProductController {
 
-    private CrudRepository<Product> productsRepository = ProductsRepository.getDummyInstance();
+    private static CrudRepository<Product> productsRepository = ProductsRepository.getDummyInstance();
     //uncomment this line to use the actual repository
-//    private CrudRepository<Product> productsRepository = ProductsRepository.getInstance();
+//    private static CrudRepository<Product> productsRepository = ProductsRepository.getInstance();
 
     @GetMapping("/products")
     public String products(Model model) {
 
-        model.addAttribute("productsList", productsRepository.readAll());
-        //test
-        return "products";
+        return getProductsPage(model);
     }
 
     @GetMapping("/product")
@@ -81,6 +79,11 @@ public class ProductController {
         } else {
             productsRepository.update(product);
         }
+        return "products";
+    }
+
+    static String getProductsPage(Model model) {
+        model.addAttribute("productsList", productsRepository.readAll());
         return "products";
     }
 }

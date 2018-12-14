@@ -106,7 +106,7 @@ public class MainController {
         if (administrator != null) {
             model.addAttribute("admin", true);
             if (page.equals("products")) {
-                model.addAttribute("productsList", productsRepository.readAll());
+                return ProductController.getProductsPage(model);
             } else if (page.equals("news")) {
                 model.addAttribute("newsList", newsRepository.readAll());
             } else {

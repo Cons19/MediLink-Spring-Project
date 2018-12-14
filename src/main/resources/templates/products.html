@@ -16,18 +16,20 @@
     <div class="product-page">
         <h1>Our Products</h1>
         <th:block th:each="product : ${productsList}">
-            <div class="card products">
-                <img class="card-img-top" src="images/product.png">
-                <div class="card-body">
-                    <h5 class="card-title" th:text="${product.name}"></h5>
-                    <p class="card-text" th:text="${product.description}">....</p>
-                    <a th:href="@{/product(id=${product.id})}" class="btn btn-primary">Read More...</a>
-                    <div th:if="${admin}">
-                        <a th:href="@{/product-edit(id=${product.id})}" class="btn btn-primary">Edit</a>
-                        <a th:href="@{/product-delete(id=${product.id})}" class="btn btn-primary">Delete</a>
+            <th:block th:if="${product}">
+                <div class="card products">
+                    <img class="card-img-top" src="images/product.png">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${product.name}"></h5>
+                        <p class="card-text" th:text="${product.description}">....</p>
+                        <a th:href="@{/product(id=${product.id})}" class="btn btn-primary">Read More...</a>
+                        <div th:if="${admin}">
+                            <a th:href="@{/product-edit(id=${product.id})}" class="btn btn-primary">Edit</a>
+                            <a th:href="@{/product-delete(id=${product.id})}" class="btn btn-primary">Delete</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </th:block>
         </th:block>
     </div>
     <div th:if="${admin}">
