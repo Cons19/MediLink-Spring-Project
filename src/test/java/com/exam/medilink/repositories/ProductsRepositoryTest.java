@@ -19,7 +19,7 @@ public class ProductsRepositoryTest {
 
     @Before
     public void setUp() {
-        mProductCrudRepository = ProductsRepository.getInstance();
+        mProductCrudRepository = (ProductsRepository) ProductsRepository.getInstance();
         mLorem = LoremIpsum.getInstance();
         mPlaceholderProducts = new ArrayList<>();
 

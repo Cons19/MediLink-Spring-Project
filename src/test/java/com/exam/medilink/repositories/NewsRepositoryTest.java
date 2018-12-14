@@ -19,7 +19,7 @@ public class NewsRepositoryTest {
 
     @Before
     public void setUp() {
-        mNewsCrudRepository = NewsRepository.getInstance();
+        mNewsCrudRepository = (NewsRepository) NewsRepository.getInstance();
         mLorem = LoremIpsum.getInstance();
         mPlaceholderNews = new ArrayList<>();
 
