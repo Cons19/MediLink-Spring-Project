@@ -10,7 +10,13 @@
 
 <!--Header Fragment-->
 <div th:insert="/page-fragments :: header('products')"></div>
-
+<!--Confirmation box-->
+<h1>Confirm the user type:</h1>
+<form action="/products">
+    <input type="radio" name="confirm" value="patient"> Patient<br>
+    <input type="radio" name="confirm" value="specialist"> Specialist<br>
+    <input type="submit" value="Submit">
+</form>
 <!--Body-->
 <div class="container">
     <div class="product-page">
