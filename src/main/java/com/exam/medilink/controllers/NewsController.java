@@ -1,7 +1,6 @@
 package com.exam.medilink.controllers;
 
 import com.exam.medilink.models.News;
-import com.exam.medilink.models.Product;
 import com.exam.medilink.repositories.CrudRepository;
 import com.exam.medilink.repositories.NewsRepository;
 import org.springframework.stereotype.Controller;
@@ -15,25 +14,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class NewsController
 {
 
-//    private CrudRepository<News> newsRepository = NewsRepository.getDummyInstance();
+//    private static CrudRepository<News> newsRepository = NewsRepository.getDummyInstance();
     //uncomment this line to use the actual repository
-    private CrudRepository<News> newsRepository = NewsRepository.getInstance();
+    private static CrudRepository<News> newsRepository = NewsRepository.getInstance();
 
     @GetMapping("/news")
     public String news(Model model) {
-
-        model.addAttribute("newsList", newsRepository.readAll());
-        return "news";
+        return getNewsPage(model, false);
     }
 
     @GetMapping("/newsArticle")
     public String newsArticle(@RequestParam("id") int id, Model model) {
 
         News news = newsRepository.read(id);
-        news.setTitle(newsRepository.read(id).getTitle());
-
-        model.addAttribute("description", news.getDescription());
         model.addAttribute("title", news.getTitle());
+        model.addAttribute("description", news.getDescription());
 
         return "news-article";
     }
@@ -65,5 +60,11 @@ public class NewsController
     public String delete(@RequestParam("id") int id) {
         newsRepository.delete(id);
         return "redirect:/news";
+    }
+
+    static String getNewsPage(Model model, boolean isAdmin) {
+        model.addAttribute("admin", isAdmin);
+        model.addAttribute("newsList", newsRepository.readAll());
+        return "news";
     }
 }

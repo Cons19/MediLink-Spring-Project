@@ -16,18 +16,20 @@
     <div class="product-page">
         <h1>Latest News</h1>
         <th:block th:each="news : ${newsList}">
-            <div class="card products news">
-                <!--<img class="card-img-top" src="images/product.png">-->
-                <div class="card-body">
-                    <h5 class="card-title" th:text="${news.title}"></h5>
-                    <p class="card-text" th:text="${news.description}">...</p>
-                    <a th:href="@{/newsArticle(id=${news.id})}" class="btn btn-primary">Read More...</a>
-                    <div th:if="${admin}">
-                        <a th:href="@{/news-edit(id=${news.id})}" class="btn btn-primary orange">Edit</a>
-                        <a th:href="@{/news-delete(id=${news.id})}" class="btn btn-primary red">Delete</a>
+            <th:block th:if="${news}">
+                <div class="card products news">
+                    <!--<img class="card-img-top" src="images/product.png">-->
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${news.title}"></h5>
+                        <p class="card-text" th:text="${news.description}">...</p>
+                        <a th:href="@{/newsArticle(id=${news.id})}" class="btn btn-primary">Read More...</a>
+                        <div th:if="${admin}">
+                            <a th:href="@{/news-edit(id=${news.id})}" class="btn btn-primary orange">Edit</a>
+                            <a th:href="@{/news-delete(id=${news.id})}" class="btn btn-primary red">Delete</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </th:block>
         </th:block>
     </div>
     <div th:if="${admin}">

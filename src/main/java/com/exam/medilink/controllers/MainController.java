@@ -1,11 +1,7 @@
 package com.exam.medilink.controllers;
 
-import com.exam.medilink.models.News;
-import com.exam.medilink.models.Product;
 import com.exam.medilink.models.User;
 import com.exam.medilink.repositories.CrudRepository;
-import com.exam.medilink.repositories.NewsRepository;
-import com.exam.medilink.repositories.ProductsRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,9 +46,6 @@ public class MainController {
             return false;
         }
     };
-    private CrudRepository<Product> productsRepository = ProductsRepository.getDummyInstance();
-    private CrudRepository<News> newsRepository = NewsRepository.getDummyInstance();
-//    private CrudRepository<News> newsRepository = NewsRepository.getDummyInstance();
 
     private User administrator;
 
@@ -89,7 +82,7 @@ public class MainController {
         if (administrator != null) {
             return "redirect:/admin-page";
         } else {
-            return "redirect:/login";
+            return "login";
         }
     }
 
@@ -105,16 +98,13 @@ public class MainController {
     @PostMapping("/admin-page")
     public String admin(@ModelAttribute("page") String page, Model model) {
         if (administrator != null) {
-            model.addAttribute("admin", true);
             if (page.equals("products")) {
-                return ProductController.getProductsPage(model);
+                return ProductController.getProductsPage(model, true);
             } else if (page.equals("news")) {
-                model.addAttribute("newsList", newsRepository.readAll());
+                return NewsController.getNewsPage(model, true);
             } else {
                 return "admin-page";
             }
-//            return "redirect:/page";
-            return page;
         } else {
             return "redirect:/login";
         }

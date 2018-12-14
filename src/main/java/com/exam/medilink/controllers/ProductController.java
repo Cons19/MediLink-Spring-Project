@@ -22,8 +22,7 @@ public class ProductController {
 
     @GetMapping("/products")
     public String products(Model model) {
-
-        return getProductsPage(model);
+        return getProductsPage(model, false);
     }
 
     @GetMapping("/product")
@@ -88,7 +87,8 @@ public class ProductController {
         return "redirect:/products";
     }
 
-    static String getProductsPage(Model model) {
+    static String getProductsPage(Model model, boolean isAdmin) {
+        model.addAttribute("admin", isAdmin);
         model.addAttribute("productsList", productsRepository.readAll());
         return "products";
     }
