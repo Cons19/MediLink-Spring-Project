@@ -9,7 +9,6 @@ public class Product implements CrudItem, Serializable {
     private String description;
 
     public Product() {
-
     }
 
     public Product(int id, String name) {

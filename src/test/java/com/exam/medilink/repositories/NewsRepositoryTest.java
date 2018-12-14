@@ -27,7 +27,6 @@ public class NewsRepositoryTest {
         for (int i = 0; i < 10; i++) {
             mPlaceholderNews.add(new News(mPlaceholderNews.size(), lorem.getTitle(5, 10), lorem.getParagraphs(1, 4)));
         }
-
         mNewsCrudRepository.saveItems(mPlaceholderNews);
     }
 
@@ -36,7 +35,6 @@ public class NewsRepositoryTest {
         News item = new News(-1, mLorem.getTitle(5), mLorem.getParagraphs(1, 4));
         mPlaceholderNews.add(item);
         int id = mPlaceholderNews.indexOf(item);
-
         int id2 = mNewsCrudRepository.create(item);
         assertEquals(id, id2);
         assertNotEquals(-1, id2);

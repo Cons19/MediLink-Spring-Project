@@ -10,7 +10,6 @@ public class News implements CrudItem, Serializable {
     private String description;
 
     public News() {
-
     }
 
     public News(int id, String title, String description) {
@@ -67,7 +66,5 @@ public class News implements CrudItem, Serializable {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 '}';
-
-
     }
 }

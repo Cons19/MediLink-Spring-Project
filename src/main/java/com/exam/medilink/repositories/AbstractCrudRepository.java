@@ -10,13 +10,11 @@ abstract class AbstractCrudRepository<T extends CrudItem> implements CrudReposit
     private final String ITEMS_FILE_NAME = getItemsFileName() + ".bin";
 
     AbstractCrudRepository() {
-
     }
 
     @Override
     public int create(T item) {
         List<T> itemsList = loadItems();
-
 
         item.setId(itemsList.size());
         itemsList.add(item);
@@ -87,7 +85,6 @@ abstract class AbstractCrudRepository<T extends CrudItem> implements CrudReposit
         } catch (IOException | ClassNotFoundException e) {
             itemList = new ArrayList<>();
         }
-
         return itemList;
     }
 }

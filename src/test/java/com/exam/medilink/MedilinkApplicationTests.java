@@ -12,5 +12,4 @@ public class MedilinkApplicationTests {
     @Test
     public void contextLoads() {
     }
-
 }

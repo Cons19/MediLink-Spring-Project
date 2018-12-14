@@ -16,10 +16,12 @@ public class MainController {
     private CrudRepository<User> userRepository = new CrudRepository<User>() {
         List<User> userList = new ArrayList<>();
         {
-            userList.add(new User("mar"));
-            userList.add(new User("const"));
-            userList.add(new User("dragon"));
-            userList.add(new User("pau"));
+            userList.add(new User("pass"));
+            userList.add(new User("password"));
+            userList.add(new User("marius"));
+            userList.add(new User("paul"));
+            userList.add(new User("constantin"));
+            userList.add(new User("dragos"));
         }
         @Override
         public int create(User item) {

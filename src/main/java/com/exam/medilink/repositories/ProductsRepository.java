@@ -75,7 +75,6 @@ public class ProductsRepository extends AbstractCrudRepository<Product> {
                     return true;
                 }
             };
-
         }
         return dummyInstance;
     }
