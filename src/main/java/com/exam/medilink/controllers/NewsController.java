@@ -35,5 +35,11 @@ public class NewsController
         return "news-article";
     }
 
+    @GetMapping("/news-delete")
+    public String delete(@RequestParam("id") int id) {
+        newsRepository.delete(id);
+        return "news";
+    }
+
 
 }

@@ -2,14 +2,44 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = "images/product.png">
     <title>Product</title>
 </head>
 <body>
+
+<!--Header Fragment-->
+<div th:insert="/page-fragments :: header('products')"></div>
+
+
+<!--Body-->
+<!--<div class="container">-->
+    <!--<div class="card card-big">-->
+        <!--<img class="card-img-top center" src="images/product.png">-->
+        <!--<div class="card-body">-->
+            <!--<h5 class="card-title" th:text="${title}"> </h5>-->
+            <!--<input class="card-title" type="text" th:text="${title}">-->
+            <!--<textarea>-->
+
+            <!--</textarea>-->
+            <!--<tr th:each="dv: ${description}" class="card-text">-->
+                <!--&lt;!&ndash;<p th:text="${dv}"></p>&ndash;&gt;-->
+                <!--<div class="text" th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(dv),'\n','&lt;br /&gt;'))}"></div>-->
+            <!--</tr>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
 <form action="/product-edit" th:object="${productItem}" method="post">
     <input type="hidden" th:field="*{id}">
     <input type="text" th:field="*{name}" required>
     <input type="text" th:field="*{description}" required>
     <input type="submit" value="Save">
 </form>
+
+
+<!--Footer Fragment-->
+<div th:insert="/page-fragments :: footer"></div>
+
 </body>
 </html>

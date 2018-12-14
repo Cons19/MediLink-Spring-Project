@@ -1,5 +1,0 @@
-This is the description for the 1st product.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sem vitae leo ullamcorper fermentum eu vitae enim.
-Etiam non tristique urna. Morbi convallis suscipit facilisis. Proin cursus pretium nibh, ut sodales tortor mollis ac.
-Aliquam sed elementum velit. Quisque ullamcorper ante sodales, faucibus orci at, lacinia dui. Integer sed aliquam turpis, nec tincidunt enim. In tincidunt, ipsum non tristique mollis, risus eros vulputate mi, in feugiat urna justo eu justo. Phasellus ornare maximus laoreet.
