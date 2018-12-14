@@ -10,17 +10,37 @@
 
 <!--Header Fragment-->
 <div th:insert="/page-fragments :: header('products')"></div>
+
 <!--Confirmation box-->
-<h1>Confirm the user type:</h1>
-<form action="/products">
-    <input type="radio" name="confirm" value="patient"> Patient<br>
-    <input type="radio" name="confirm" value="specialist"> Specialist<br>
-    <input type="submit" value="Submit">
-</form>
+<!--<h1>Confirm the user type:</h1>-->
+<!--<form action="/products">-->
+    <!--<input type="radio" name="confirm" value="patient"> Patient<br>-->
+    <!--<input type="radio" name="confirm" value="specialist"> Specialist<br>-->
+    <!--<input type="submit" value="Submit">-->
+<!--</form>-->
+
 <!--Body-->
 <div class="container">
+    <!--<div class="login-page">-->
+
+    <!--</div>-->
+
     <div class="product-page">
         <h1>Our Products</h1>
+        <div class="login center edit green">
+            <h5>Search products by user type</h5>
+            <div class="form-group-custom">
+                <form action="/search" method="post" class="edit-form">
+                    <input type="hidden" name="q" value="patient">
+                    <button class="btn btn-success" type="submit" value="Patient">Patient</button>
+                </form>
+                <form action="/search" method="post" class="edit-form">
+                    <input type="hidden" name="q" value="specialist">
+                    <button class="btn btn-success" type="submit" value="Specialist">Specialist</button>
+                </form>
+            </div>
+        </div>
+
         <th:block th:if="${!productsList.isEmpty()}">
             <th:block th:each="product : ${productsList}">
                 <th:block th:if="${product}">

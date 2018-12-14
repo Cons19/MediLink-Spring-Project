@@ -14,6 +14,20 @@ body {
     padding-bottom: 50px;
 }
 
+.product-page .form-group-custom {
+    /*display: inline-block;*/
+    display: inline-flex;
+}
+
+.product-page .form-group-custom .edit-form{
+    margin: 10px;
+}
+
+.login.edit.green {
+    border: 1px solid #28a745;
+    color: #28a745;
+}
+
 .product-page h1 {
     text-align: center;
     padding-top: 10px;
