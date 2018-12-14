@@ -474,3 +474,30 @@ button:active {
     margin-top: 20px;
 }
 
+
+
+/* Edit Product Page */
+
+.login .edit-form textarea {
+    min-height: 150px;
+}
+
+.login .edit-form .edit-custom {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.login .edit-form h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login .edit-custom {
+    margin-bottom: 20px;
+
+}
+
+.login.edit {
+    padding-left: 40px;
+    padding-right: 40px;
+}
