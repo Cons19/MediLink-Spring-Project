@@ -45,9 +45,11 @@ public class ProductController {
         } else {
             filter = filter.toLowerCase().replaceAll(" ", "");
             for (Product product : productList) {
-                String name = product.getName().toLowerCase().replaceAll(" ", "");
-                if (name.contains(filter)) {
-                    filteredList.add(product);
+                if (product != null) {
+                    String name = product.getName().toLowerCase().replaceAll(" ", "");
+                    if (name.contains(filter)) {
+                        filteredList.add(product);
+                    }
                 }
             }
         }
@@ -55,8 +57,7 @@ public class ProductController {
         model.addAttribute("admin", false);
         model.addAttribute("productsList", filteredList);
 
-//        return "products";
-        return "redirect:/products";
+        return "products";
     }
 
     @GetMapping("/product-edit")
