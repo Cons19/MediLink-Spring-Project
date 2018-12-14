@@ -11,7 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +50,8 @@ public class MainController {
             return false;
         }
     };
-    private CrudRepository<Product> productCrudRepository = ProductsRepository.getInstance();
-    private CrudRepository<News> newsCrudRepository = NewsRepository.getDummyInstance();
+    private CrudRepository<Product> productsRepository = ProductsRepository.getInstance();
+    private CrudRepository<News> newsRepository = NewsRepository.getDummyInstance();
 
     private User administrator;
 
@@ -87,22 +86,36 @@ public class MainController {
         }
 
         if (administrator != null) {
-            //TODO: create administration view for the web app
-            return "ADMIN_TEMPLATE";
+            return "admin-page";
         } else {
-            model.addAttribute("result", -1);
             return "login";
         }
     }
 
-    @GetMapping("/ADMIN_TEMPLATE")
+    @GetMapping("/admin-page")
     public String admin() {
-        return "ADMIN_TEMPLATE";
+        if (administrator != null) {
+            return "admin-page";
+        } else {
+            return "login";
+        }
     }
 
-    @PostMapping("/ADMIN_TEMPLATE")
-    public String admin(boolean placeholder) {
-        return "ADMIN_TEMPLATE";
+    @PostMapping("/admin-page")
+    public String admin(@ModelAttribute("page") String page, Model model) {
+        if (administrator != null) {
+            model.addAttribute("admin", true);
+            if (page.equals("products")) {
+                model.addAttribute("productsList", productsRepository.readAll());
+            } else if (page.equals("news")) {
+                model.addAttribute("newsList", newsRepository.readAll());
+            } else {
+                return "admin-page";
+            }
+            return page;
+        } else {
+            return "login";
+        }
     }
 
     @GetMapping("/faq")
