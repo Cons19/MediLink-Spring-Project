@@ -11,31 +11,25 @@
 <!--Header Fragment-->
 <div th:insert="/page-fragments :: header('news')"></div>
 
-
 <!--Body-->
-<!--<div class="container">-->
-<!--<div class="card card-big">-->
-<!--<img class="card-img-top center" src="images/product.png">-->
-<!--<div class="card-body">-->
-<!--<h5 class="card-title" th:text="${title}"> </h5>-->
-<!--<input class="card-title" type="text" th:text="${title}">-->
-<!--<textarea>-->
 
-<!--</textarea>-->
-<!--<tr th:each="dv: ${description}" class="card-text">-->
-<!--&lt;!&ndash;<p th:text="${dv}"></p>&ndash;&gt;-->
-<!--<div class="text" th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(dv),'\n','&lt;br /&gt;'))}"></div>-->
-<!--</tr>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
+<div class="container">
+    <div class="login-page">
+        <h1>Edit the News Article</h1>
+        <div class="login center edit">
+            <form action="/news-edit" th:object="${newsItem}" method="post" class="edit-form">
+                <input type="hidden" th:field="*{id}" class="form-control edit-custom">
+                <h5>Title</h5>
+                <input type="text" th:field="*{title}" required class="form-control edit-custom">
+                <h5>Description</h5>
+                <textarea type="text" th:field="*{description}" required class="form-control edit-custom"></textarea>
+                <button class="btn btn-primary" type="submit">Save</button>
+            </form>
+        </div>
 
-<form action="/news-edit" th:object="${newsItem}" method="post">
-    <input type="hidden" th:field="*{id}">
-    <input type="text" th:field="*{title}" required>
-    <input type="text" th:field="*{description}" required>
-    <input type="submit" value="Save">
-</form>
+    </div>
+</div>
+
 
 
 <!--Footer Fragment-->

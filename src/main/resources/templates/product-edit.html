@@ -18,7 +18,6 @@
     <div class="login-page">
         <h1>Edit the product</h1>
         <div class="login center edit">
-
             <form action="/product-edit" th:object="${productItem}" method="post" class="edit-form">
                 <input type="hidden" th:field="*{id}" class="form-control edit-custom">
                 <h5>Title</h5>
@@ -28,13 +27,6 @@
                 <!--<input class="btn btn-primary" type="submit" value="Save">-->
                 <button class="btn btn-primary" type="submit">Save</button>
             </form>
-
-
-            <!--<form action="/login" method="post">-->
-                <!--<p>Password</p>-->
-                <!--<input type="password" name="password" class="form-control login-custom">-->
-                <!--<button class="btn btn-primary" type="submit">Login</button>-->
-            <!--</form>-->
         </div>
 
     </div>
