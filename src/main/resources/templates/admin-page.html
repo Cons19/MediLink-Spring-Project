@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel = "icon" href = "images/product.png">
-    <title>Login</title>
+    <title>Admin</title>
 </head>
 <body>
 
@@ -24,12 +24,16 @@
 <!--Body-->
 <div class="container">
     <div class="login-page">
-        <h1>Login as Admin:</h1>
+        <h1>Admin Page</h1>
         <div class="login center">
-            <form action="/login" method="post">
-                <p>Password</p>
-                <input type="password" name="password" class="form-control login-custom">
-                <button class="btn btn-primary" type="submit">Login</button>
+            <p>Choose category to modify:</p>
+            <form action="/admin-page" method="post">
+                <input type="hidden" name="page" value="products">
+                <button class="btn btn-primary" type="submit">Products</button>
+            </form>
+            <form action="/admin-page" method="post">
+                <input type="hidden" name="page" value="news">
+                <button class="btn btn-primary" type="submit">News</button>
             </form>
         </div>
 
