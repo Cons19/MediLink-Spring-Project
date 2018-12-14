@@ -31,8 +31,6 @@ public class ProductController {
     public String product(@RequestParam("id") int id, Model model) {
 
         Product product = productsRepository.read(id);
-//        product.setName(productsRepository.read(id).getName());
-
         model.addAttribute("title", product.getName());
         model.addAttribute("description", product.getDescription());
 
@@ -56,8 +54,16 @@ public class ProductController {
             }
         }
 
+        model.addAttribute("admin", false);
         model.addAttribute("productsList", filteredList);
 
         return "products";
+    }
+
+    @GetMapping("/product-edit")
+    public String edit(@RequestParam("id") int id, Model model) {
+        Product item = (id == -1) ? new Product() : productsRepository.read(id);
+        model.addAttribute("productItem", item);
+        return "product-edit";
     }
 }
