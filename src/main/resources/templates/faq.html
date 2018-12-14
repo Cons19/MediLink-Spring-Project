@@ -3,7 +3,6 @@
 <head>
     <!--Import Fragment-->
     <div th:insert="/page-fragments :: imports"></div>
-
     <title>Frequently Asked Questions</title>
 </head>
 <body>
@@ -36,7 +35,6 @@
 <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
-
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
             this.classList.toggle("active");

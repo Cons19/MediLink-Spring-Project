@@ -15,7 +15,6 @@ body {
 }
 
 .product-page .form-group-custom {
-    /*display: inline-block;*/
     display: inline-flex;
 }
 
@@ -35,7 +34,6 @@ body {
 }
 
 .card {
-    /*display: inline-block;*/
     display: inline-flex;
     width: 300px;
     padding: 20px;
@@ -70,8 +68,6 @@ body {
 .card.products.news:last-of-type {
     margin-bottom: 0px;
 }
-
-
 
 .card-img-top {
     width: 200px;
@@ -150,8 +146,6 @@ body {
     margin-bottom: 30px;
 }
 
-
-
 .card-big .card-body {
     border-top: 1px solid #ccc;
 }
@@ -164,9 +158,11 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 .card-big .card-text {
     color: #212529;
 }
+
 .center {
     display: block;
     margin-left: auto;
@@ -187,7 +183,6 @@ body {
 
 .search-custom {
     margin-left: 40px;
-    /*background-color: rgb(233, 241, 255);*/
     border: 1px solid #007bff;
     color: #212529;
 }
@@ -222,10 +217,6 @@ body {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 50px;
-}
-
-.contact p {
-    /*margin-top: 30px;*/
 }
 
 .pill-custom {
@@ -317,7 +308,6 @@ body {
 
 .footer-custom .footer-right ul {
     list-style: none;
-    /*padding-left: 180px;*/
     float: right;
     padding-top: 13px;
     padding-right: 180px;
@@ -458,6 +448,7 @@ button:active {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+
 /* Login Page */
 
 .login-page {
@@ -469,10 +460,6 @@ button:active {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 30px;
-}
-
-.login-custom {
-    /*width: 300px;*/
 }
 
 .login {
@@ -487,8 +474,6 @@ button:active {
 .login button {
     margin-top: 20px;
 }
-
-
 
 /* Edit Product Page */
 
