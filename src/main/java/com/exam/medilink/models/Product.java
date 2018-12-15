@@ -7,19 +7,24 @@ public class Product implements CrudItem, Serializable {
     private int id;
     private String name;
     private String description;
+    private String imgPath;
 
     public Product() {
     }
 
     public Product(int id, String name) {
-        this.id = id;
-        this.name = name;
+        this(id, name, "");
     }
 
     public Product(int id, String name, String description) {
+        this(id, name, description, "");
+    }
+
+    public Product(int id, String name, String description, String imgPath) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.imgPath = imgPath;
     }
 
     @Override
@@ -46,6 +51,14 @@ public class Product implements CrudItem, Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 
     @Override
