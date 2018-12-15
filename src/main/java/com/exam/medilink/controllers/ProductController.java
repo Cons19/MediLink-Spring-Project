@@ -56,15 +56,18 @@ public class ProductController {
         return "products";
     }
 
+    @GetMapping("/product-add")
+    public String add(Model model) {
+        Product item = new Product();
+        item.setId(-1);
+        model.addAttribute("productItem", item);
+        return "product-edit";
+    }
+
     @GetMapping("/product-edit")
     public String edit(@RequestParam("id") int id, Model model) {
-        Product item;
-        if (id == -1) {
-            item = new Product();
-            item.setId(-1);
-        } else {
-            item = productsRepository.read(id);
-        }
+        Product item = productsRepository.read(id);
+
         model.addAttribute("productItem", item);
         return "product-edit";
     }

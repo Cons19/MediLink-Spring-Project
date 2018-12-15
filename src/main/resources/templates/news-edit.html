@@ -3,7 +3,7 @@
 <head>
     <!--Import Fragment-->
     <div th:insert="/page-fragments :: imports"></div>
-    <title>News Edit</title>
+    <title th:text="${newsItem.id == -1 ? 'Create News Article' : 'Edit News Article'}"></title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 <!--Body-->
 <div class="container">
     <div class="login-page">
-        <h1>Edit the News Article</h1>
+        <h1 th:text="${newsItem.id == -1 ? 'Create the news article' : 'Edit the news article'}"></h1>
         <div class="login center edit">
             <form action="/news-edit" th:object="${newsItem}" method="post" class="edit-form">
                 <input type="hidden" th:field="*{id}" class="form-control edit-custom">

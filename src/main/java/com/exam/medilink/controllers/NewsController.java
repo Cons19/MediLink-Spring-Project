@@ -31,15 +31,18 @@ public class NewsController
         return "news-article";
     }
 
+    @GetMapping("/news-add")
+    public String add(Model model) {
+        News item = new News();
+        item.setId(-1);
+        model.addAttribute("newsItem", item);
+        return "news-edit";
+    }
+
     @GetMapping("/news-edit")
     public String edit(@RequestParam("id") int id, Model model) {
-        News item;
-        if (id == -1) {
-            item = new News();
-            item.setId(-1);
-        } else {
-            item = newsRepository.read(id);
-        }
+        News item = newsRepository.read(id);
+
         model.addAttribute("newsItem", item);
         return "news-edit";
     }
