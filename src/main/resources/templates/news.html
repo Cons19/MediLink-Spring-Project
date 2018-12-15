@@ -15,6 +15,9 @@
 <div class="container">
     <div class="product-page">
         <h1 th:text="#{headline_news}"></h1>
+        <div th:if="${admin}" class="buttons">
+            <a href="/news-add" class="btn btn-success">Add News</a>
+        </div>
         <th:block th:each="news : ${newsList}">
             <th:block th:if="${news}">
                 <div class="card products news">
@@ -31,9 +34,6 @@
                 </div>
             </th:block>
         </th:block>
-    </div>
-    <div th:if="${admin}" class="buttons">
-        <a href="/news-add" class="btn btn-success">Add News</a>
     </div>
 </div>
 

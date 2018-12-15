@@ -15,6 +15,9 @@
 <div class="container">
     <div class="product-page">
         <h1 th:text="#{headline_products}"></h1>
+        <div th:if="${admin}" class="buttons">
+            <a href="/product-add" class="btn btn-success">Add Product</a>
+        </div>
         <th:block th:if="${!productsList.isEmpty()}">
             <th:block th:each="product : ${productsList}">
                 <th:block th:if="${product}">
@@ -36,9 +39,6 @@
         <th:block th:unless="${!productsList.isEmpty()}">
             <p>No matching products found</p>
         </th:block>
-    </div>
-    <div th:if="${admin}" class="buttons">
-        <a href="/product-add" class="btn btn-success">Add Product</a>
     </div>
 </div>
 
