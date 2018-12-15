@@ -8,14 +8,21 @@ public class News implements CrudItem, Serializable {
     private int id;
     private String title;
     private String description;
+    private String imgPath;
 
     public News() {
+
     }
 
     public News(int id, String title, String description) {
+        this(id, title, description, "");
+    }
+
+    public News(int id, String title, String description, String imgPath) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.imgPath = imgPath;
     }
 
     @Override
@@ -42,6 +49,14 @@ public class News implements CrudItem, Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 
     @Override

@@ -22,6 +22,8 @@
                 <input type="text" th:field="*{title}" required class="form-control edit-custom">
                 <h5>Description</h5>
                 <textarea type="text" th:field="*{description}" required class="form-control edit-custom"></textarea>
+                <h5>Image URL</h5>
+                <input type="url" th:field="*{imgPath}" class="form-control edit-custom">
                 <button class="btn btn-primary" type="submit">Save</button>
             </form>
         </div>
