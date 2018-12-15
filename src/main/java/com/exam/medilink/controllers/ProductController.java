@@ -16,6 +16,7 @@ import java.util.List;
 @Controller
 public class ProductController {
 
+
 //    private static CrudRepository<Product> productsRepository = ProductsRepository.getDummyInstance();
     //uncomment this line to use the actual repository
     private static CrudRepository<Product> productsRepository = ProductsRepository.getInstance();
