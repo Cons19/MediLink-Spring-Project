@@ -14,7 +14,7 @@
 <!--Body-->
 <div class="container">
     <div class="product-page">
-        <h1>Latest News</h1>
+        <h1 th:text="#{headline_news}"></h1>
         <th:block th:each="news : ${newsList}">
             <th:block th:if="${news}">
                 <div class="card products news">

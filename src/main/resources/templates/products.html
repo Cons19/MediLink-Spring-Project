@@ -14,7 +14,7 @@
 <!--Body-->
 <div class="container">
     <div class="product-page">
-        <h1>Our Products</h1>
+        <h1 th:text="#{headline_products}"></h1>
         <th:block th:if="${!productsList.isEmpty()}">
             <th:block th:each="product : ${productsList}">
                 <th:block th:if="${product}">
