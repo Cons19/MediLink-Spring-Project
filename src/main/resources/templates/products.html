@@ -15,19 +15,6 @@
 <div class="container">
     <div class="product-page">
         <h1>Our Products</h1>
-        <div class="login center edit green">
-            <h5>Search products by user type</h5>
-            <div class="form-group-custom">
-                <form action="/search" method="post" class="edit-form">
-                    <input type="hidden" name="q" value="patient">
-                    <button class="btn btn-success" type="submit" value="Patient">Patient</button>
-                </form>
-                <form action="/search" method="post" class="edit-form">
-                    <input type="hidden" name="q" value="specialist">
-                    <button class="btn btn-success" type="submit" value="Specialist">Specialist</button>
-                </form>
-            </div>
-        </div>
         <th:block th:if="${!productsList.isEmpty()}">
             <th:block th:each="product : ${productsList}">
                 <th:block th:if="${product}">
