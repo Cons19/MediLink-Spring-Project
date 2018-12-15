@@ -25,9 +25,7 @@ public class NewsController
 
     @GetMapping("/newsArticle")
     public String newsArticle(@RequestParam("id") int id, Model model) {
-        News news = newsRepository.read(id);
-        model.addAttribute("title", news.getTitle());
-        model.addAttribute("description", news.getDescription());
+        model.addAttribute("newsItem", newsRepository.read(id));
         return "news-article";
     }
 

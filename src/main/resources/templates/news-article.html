@@ -14,9 +14,10 @@
 <!--Body-->
 <div class="container">
     <div class="card card-big">
+        <img th:src="${!newsItem.imgPath.equals('') ? newsItem.imgPath : 'images/product.png'}" alt="Image" class="card-img-top center">
         <div class="card-body">
-            <h5 class="card-title" th:text="${title}"> </h5>
-            <tr th:each="dv: ${description}" class="card-text">
+            <h5 class="card-title" th:text="${newsItem.title}"> </h5>
+            <tr th:each="dv: ${newsItem.description}" class="card-text">
                 <div class="text" th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(dv),'\n','&lt;br /&gt;'))}"></div>
             </tr>
         </div>

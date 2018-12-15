@@ -27,9 +27,7 @@ public class ProductController {
 
     @GetMapping("/product")
     public String product(@RequestParam("id") int id, Model model) {
-        Product product = productsRepository.read(id);
-        model.addAttribute("title", product.getName());
-        model.addAttribute("description", product.getDescription());
+        model.addAttribute("productItem", productsRepository.read(id));
         return "product";
     }
 
