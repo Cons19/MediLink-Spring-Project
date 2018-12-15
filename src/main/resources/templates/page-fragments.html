@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="shortcut icon" type="image/png" href="images/product.png"/>
+    <link rel="shortcut icon" type="image/png" href="images/rsz_1medilink.png"/>
     <!--Import Fragment-->
     <div th:insert="/page-fragments :: imports"></div>
 
@@ -40,8 +40,8 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" th:href="@{/(lang=${#locale.ENGLISH})}" th:text="${#locale.ENGLISH.displayName}"></a>
                     <a class="dropdown-item" th:href="@{/(lang=${#locale.forLanguageTag('da')})}" th:text="${#locale.forLanguageTag('da').displayName}"></a>
-                    <a class="dropdown-item" th:href="@{/(lang=${#locale.forLanguageTag('es')})}" th:text="${#locale.forLanguageTag('es').displayName}"></a>
-                    <a class="dropdown-item" th:href="@{/(lang=${#locale.forLanguageTag('pt')})}" th:text="${#locale.forLanguageTag('pt').displayName}"></a>
+                    <!--<a class="dropdown-item" th:href="@{/(lang=${#locale.forLanguageTag('es')})}" th:text="${#locale.forLanguageTag('es').displayName}"></a>-->
+                    <!--<a class="dropdown-item" th:href="@{/(lang=${#locale.forLanguageTag('pt')})}" th:text="${#locale.forLanguageTag('pt').displayName}"></a>-->
                 </div>
             </div>
         </li>
